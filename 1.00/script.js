@@ -9,4 +9,4 @@ let a = prompt('enter a number'); //promt will ask user to enter a number and da
 console.log(typeof a); //will show data type of a 
 //the value entered is always stored as string
 
-//ctrl +/ to comment out code
+//ctrl +/ to comment out code para
