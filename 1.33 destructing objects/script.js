@@ -30,6 +30,7 @@ const restaurant = {
     return [this.starterMenu[starterNo], this.mainMenu[mainNo]];
   },
 
+
   y:function({time,place,starterNo,mainNo}){                                                                     //make sure its function (  {   }  ) not ()
     console.log(`your order starter ${this.starterMenu[starterNo]} and 
     main ${this.mainMenu[mainNo]} will be delivered at ${place} at ${time}`);
