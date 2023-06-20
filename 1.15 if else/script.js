@@ -16,3 +16,12 @@ else {
     console.log(century);
 }
 //    console.log(century); will error
+
+age = 33;
+let drink2;
+if (age >= 18) {
+    drink2 = 'wine 🍷';
+} else {
+    drink2 = 'water 💧';
+}
+console.log(drink2); //wont error as defined before

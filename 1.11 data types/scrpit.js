@@ -1,20 +1,23 @@
 //there are 7 data types
 
-//number
-//has all decimal and non decimal
+//number - has all decimal and non decimal
 let age = 45;
 let a = 3.4444;
 
-//string
-//must be in quotes
+//string - must be in quotes
 let name = "divya";
+let statement = `hi! I'm ${name} and ${age} years old `;
+console.log(name + statement);
+// \n\ for new line
+console.log('String with \n\ multiple \n\ lines');
+console.log(`String
+multiple
+lines`);
 
-//boolean
-//either true or false
+//boolean - either true or false
 let answer = true;
 
-//undefined
-//variable declared but value not assigned
+//undefined - variable declared but value not assigned
 let students;
 
 //null

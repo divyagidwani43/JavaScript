@@ -19,8 +19,8 @@ if (money) {
 }
 
 //let height =12 
-let height = 0;
-if (height) { //height =0 ie falsy statement so move to else block
+let height = 0;  //height =0 ie falsy statement so move to else block
+if (height) {
     console.log('YAY! Height is defined');
 } else {
     console.log('Height is UNDEFINED');

@@ -1,94 +1,78 @@
-// Functions
+//Functions is a piece of code that we can use over and over again like variable but for whole chuncks of code whwn called it executes code inside {}
+//console.log() is a function itself but it is pre defined and parameters input is given in ()
+
 function logger() {
     console.log('My name is Jonas');
+    return 0;                                                              //return ter,imates the funtion
 }
-
-// calling / running / invoking function
-logger();
-logger();
+logger();                                                                  // calling function when we do that the code inside {} execute
 logger();
 
-function fruitProcessor(apples, oranges) {
-    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+
+
+//FUNTION WITH PARAMETERS
+function fruitProcessor(apples, oranges) {                                 //functions can have different parameters inside () whose value can be input when we call the function
+    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;   //parameters can be seen as variables of funtion
     return juice;
 }
+fruitProcessor(5, 3);                                                      //we can input ant value in () to declare variables even prompt
+console.log(fruitProcessor(4));                                            // if given only one input other one will be automatically undefined
+const appleJuice = fruitProcessor(prompt('apples'), prompt('oranges'));    //will execute function
+console.log(appleJuice);                                                   //will print return value
 
-const appleJuice = fruitProcessor(5, 0);
-console.log(appleJuice);
-
-const appleOrangeJuice = fruitProcessor(2, 4);
-console.log(appleOrangeJuice);
-
-const num = Number('23');
+console.log(fruitProcessor(8, 9));                                         //will execute and print return value
 
 
-// Function Declarations vs. Expressions
 
-// Function declaration
+//FUNTION DECLARARTION
+console.log(calcAge1(1994));                                               //we can call funtion early it will still run perfectly but will error in expression
 function calcAge1(birthYeah) {
-    return 2037 - birthYeah;
+    return 2037 - birthYeah;                                               //storing directly is better than {const age = 2037-birthyear return age;}
 }
 const age1 = calcAge1(1991);
 
-// Function expression
-const calcAge2 = function (birthYeah) {
-    return 2037 - birthYeah;
-}
-const age2 = calcAge2(1991);
+//FUNTION EXPRESSION
+const calcAge2 = function (birthYeah) {                                    //its an anonymous function or func without name stored in a variable that becomes the function name
+    return `the age is ${2037 - birthYeah}`;                               //function(birthYeah) { return 2037 - birthYeah;} it can be seen as expression as it producing a value 
+}                                                                          //cant be called early
+const age2 = calcAge2(1994);                                               //func stored in varible in short
 
 console.log(age1, age2);
 
 
-// Arrow functions
 
-const calcAge3 = birthYeah => 2037 - birthYeah;
-const age3 = calcAge3(1991);
-console.log(age3);
-
-const yearsUntilRetirement2 = (birthYeah, firstName) => {
-    const age = 2037 - birthYeah;
+//ARROW FUNTION 
+const calcAge3 = birthYeah => 2037 - birthYeah;                            //Arrow functions    is function expression ie cant be called early
+console.log(calcAge3(1991));                                               //const calcAge3=    is the variable defining the function expression
+const yearsUntilRetirement2 = (birthYeah, firstName) => {                  //birthYeah =>       it is th function parameter and arrow will indicate to return value
+    const age = 2037 - birthYeah;                                          //2037 - birthYeah;  this is the return value*/
     const retirement = 65 - age;
     // return retirement;
-    return `${firstName} retires in ${retirement} years`;
+    if (age >= 0) {
+        if (retirement > 0) {
+            return `${firstName} retires in ${retirement} years`;
+        } else {
+            return `${firstName} has already retired 🎉`;
+        }
+    }
+    else return 'error the age entered is wrong';
 }
+console.log(yearsUntilRetirement2(1991, 'Jonas'));                         //will retire
+console.log(yearsUntilRetirement2(1967, 'luca'));                          //has retired
+console.log(yearsUntilRetirement2(2066, 'Bob'));                           //wrong age as age will go in -ve
 
-console.log(yearsUntilRetirement2(1991, 'Jonas')); console.log(yearsUntilRetirement2(1980, 'Bob'));
 
 
-///////////////////////////////////////
-// Functions Calling Other Functions
+//FUNTION CALLING OTHER FUNCTION 
 function cutFruitPieces(fruit) {
     return fruit * 4;
 }
 
-function fruitProcessor(apples, oranges) {
-    const applePieces = cutFruitPieces(apples);
+function fruitProcessor2(apples, oranges) {
+    const applePieces = cutFruitPieces(apples);                            //using above function
     const orangePieces = cutFruitPieces(oranges);
 
-    const juice = `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
+    let juice = `${applePieces} apple, ${orangePieces} orange pieces.`;
     return juice;
 }
-console.log(fruitProcessor(2, 3));
-
-
-///////////////////////////////////////
-// Reviewing Functions
-const calcAge = function (birthYeah) {
-    return 2037 - birthYeah;
-}
-
-const yearsUntilRetirement = function (birthYeah, firstName) {
-    const age = calcAge(birthYeah);
-    const retirement = 65 - age;
-
-    if (retirement > 0) {
-        console.log(`${firstName} retires in ${retirement} years`);
-        return retirement;
-    } else {
-        console.log(`${firstName} has already retired 🎉`);
-        return -1;
-    }
-}
-
-console.log(yearsUntilRetirement(1991, 'Jonas'));
-console.log(yearsUntilRetirement(1950, 'Mike'));
+console.log(fruitProcessor2(2, 3));

@@ -1,4 +1,6 @@
-// Looping Arrays, Breaking and Continuing
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// LOOPING ARRAYS
 const jonas = [
     'Jonas',
     'Schmedtmann',
@@ -8,6 +10,7 @@ const jonas = [
     true
 ];
 const types = [];
+const types2 = [];
 
 // console.log(jonas[0])
 // console.log(jonas[1])
@@ -18,22 +21,22 @@ const types = [];
 for (let i = 0; i < jonas.length; i++) {
     // Reading from jonas array
     console.log(jonas[i], typeof jonas[i]);
-
     // Filling types array
-    // types[i] = typeof jonas[i];
-    types.push(typeof jonas[i]);
+    types2[i] = typeof jonas[i];
+    types.push(typeof jonas[i]);                                             //pushes the data type of jonas in types array                                                
 }
-
 console.log(types);
+
 
 const years = [1991, 2007, 1969, 2020];
 const ages = [];
-
 for (let i = 0; i < years.length; i++) {
     ages.push(2037 - years[i]);
 }
 console.log(ages);
 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // continue and break
 console.log('--- ONLY STRINGS ---')
 for (let i = 0; i < jonas.length; i++) {
@@ -50,8 +53,8 @@ for (let i = 0; i < jonas.length; i++) {
 }
 
 
-///////////////////////////////////////
-// Looping Backwards and Loops in Loops
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// LOOPING BACKWARD AND LOOPS IN LOOP
 const jonas2 = [
     'Jonas',
     'Schmedtmann',
