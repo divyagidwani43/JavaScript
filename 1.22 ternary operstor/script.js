@@ -9,7 +9,6 @@ age >= 18 ?                                     //condition then after ? starts 
 const drink = age >= 18 ? 'wine 🍷' : 'water 💧';
 console.log(drink);
 
-
 //same as
 let drink2;
 if (age >= 18) {

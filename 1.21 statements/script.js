@@ -22,6 +22,7 @@ if (23 > 10) {
 const me = 'Jonas';
 console.log(`I'm ${2037 - 1991} years old ${me}`);//is correct but
 
+
 //let x = if (23 > 10) {
 //    const str = '23 is bigger';
 //    };                                 //will error

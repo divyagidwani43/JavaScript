@@ -4,7 +4,6 @@ This time, let's use objects to implement the calculations!
  Remember: BMI = mass / (height * height) (mass in kg and height in meters).
 
 Your tasks:
-
 For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith).
  Name these objects as mark and john, and their properties exactly as fullName, mass and height.
 

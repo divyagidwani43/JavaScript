@@ -24,6 +24,7 @@ switch (day) {
         console.log('Not a valid day!');
 }
 
+
 //same can be done using if else
 if (day === 'monday') {
     console.log('Plan course structure');
