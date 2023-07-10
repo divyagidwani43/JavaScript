@@ -5,20 +5,26 @@ console.log(40 + 30 + 4); //will print answer to console
 //console can only store or print 5 values
 console.log(c, b);
 console.log(c + b);
+console.log("jonas");
 
-alert('hello') //will print hello to console
+
+alert('hello') //will print hello as pop up
+
 
 let a = prompt('enter a number'); //promt will ask user to enter a number and data will be stored in variable named a
 console.log(typeof a); //will show data type of a 
 //the value entered is always stored as string
 
+
 //ctrl +/ to comment out code para
+
 
 // \n\ for new line
 console.log('String with \n\ multiple \n\ lines');
 console.log(`String
 multiple
 lines`);
+
 
 /*
 there have been various versions of javascript
@@ -34,5 +40,9 @@ when a feature is at stage three, browsers can be pretty sure it will eventually
 And so they're gonna start implementing that featurewhile still in stage three.
 */
 
+
 //alt+up to move a line up
 //select and press ctrl+d and whateveru change will change in all the code eg name of variable
+
+
+//  \' will ignore ' in string to not see it as end of string
