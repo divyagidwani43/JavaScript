@@ -31,8 +31,13 @@ let students;
 //javascript is dynamic ie it recognises the type when we enter the varible value and it need not be specified first
 //we can assign one varible to 2 data types ie change its data type in code
 //variable value decides data type
+/*dynamic languages. In static languages, when we declare a
+variable, the type of the variable is set and it cannot be changed
+in the future. In a dynamic language like JavaScript,
+the type of a variable can change at run time. Let's see this*/
 let age_now = 34;       //number type
 age_now = "thirty four"; //string type
+
 
 true; //it is automatically seen as boolean
 344;
