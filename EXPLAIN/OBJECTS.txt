@@ -1,0 +1,42 @@
+OBJECTS
+a.firtName = 'john'; 
+will change the firstname
+
+
+console.log(a.age); 
+will access age
+
+console.log(a['age']);                                                                                         
+calling age from object using bracket notation bracket is solved from left to right but brackets are done first 
+fist age is seen then a is compiled inside '' any expression can be put
+
+
+console.log(a.interestedIn);                                                                                   
+will display undefined as Jonas does not have a property called 'interested in', right? And so therefore the result of trying to access 'interested in' on Jonas is undefined.
+
+console.log(a[interestedIn]);                                                                                 
+will display correct ,if wrong input given will display undefined , undefined is what we get when we try to access a property on an object that does not exist ,a.[interestedIn] will take value of interestedIn first and it will become a[age]that does exist , it a clever way of asking what data user wants to access from object
+
+
+
+a.job = 'teacher';                                                                                             
+a['place'] = 'jaipur';
+will add property and data
+
+a['friends'].length
+a.friends.length
+
+delete a.dk;
+delete property and data
+
+
+
+a.friends.push('bob');
+push into friends array declared in object
+
+
+
+console.log(a['calcAge'](1991));
+console.log(a.calcAge(1991));
+calling function declared in object
+

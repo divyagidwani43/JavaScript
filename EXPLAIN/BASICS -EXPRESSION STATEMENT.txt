@@ -1,0 +1,20 @@
+BASICS -EXPRESSION STATEMENT
+
+console.log             ------------------->to print
+
+alert                   ------------------->to pop up not input
+
+prompt                  ------------------->to input in pop up by user
+
+\n\ or `line_change_using_enter`
+
+
+
+STATEMENT
+may or may not produce a value but does an action for ex- if else statement switch statement
+
+EXPRESSION
+anything producing value for ex
+3+4 , true && variable && var
+
+primtive values declared using const are inmutable but the refernece types like array and object can have their elements mutated even when declared using const

@@ -8,3 +8,4 @@ let language;
 console.log(typeof isIsland, typeof country, typeof language)
 
 language = 'hindi';
+

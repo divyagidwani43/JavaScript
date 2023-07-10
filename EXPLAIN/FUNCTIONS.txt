@@ -1,0 +1,28 @@
+FUNCTIONS
+declaring --->function function_name(input){function property}
+return statement exits function any code below return is not executed
+
+fruitProcessor(5, 3);                       
+calling function
+
+console.log(fruitProcessor(4));                    
+printing return value
+
+
+FUNTION DECLARARTION
+function function_name(input){
+       function property
+}
+can be called before inilisation in code
+
+
+FUNTION EXPRESSION
+const func_name = function (input) {
+          property
+}
+
+ARROW FUNTION 
+is function expression
+const func_name= input =>return value
+
+

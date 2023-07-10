@@ -1,7 +1,10 @@
 // Equality Operators: == vs. ===
+//== and === are comparision and = is assignment used to assign values
 
+//== allows type coersion and === not
 console.log(1 === 1);
 console.log('1' === 1);//false
+console.log(1 == '1');//true
 
 const age = 18; //equates variable to value
 if (age === 18) console.log('=== worked');

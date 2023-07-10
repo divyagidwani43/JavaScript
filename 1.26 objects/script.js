@@ -1,5 +1,3 @@
-
-
 // Introduction to Objects
 const Array = [
     'Jonas',                                                                                                   //we cant give name to arrays index like we cant call an element 'jonas'as name to call jonas 

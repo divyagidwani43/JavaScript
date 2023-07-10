@@ -1,0 +1,9 @@
+STATEMENTS - SWITCH , IF ELSE
+
+switch(variable_name)
+case(n_n_value)
+break;
+case(v_n_value2)
+break;
+.....
+

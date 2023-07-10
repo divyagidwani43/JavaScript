@@ -1,5 +1,9 @@
-console.log(1 || false);//one is truthy value 
-console.log(0 || false); //will give false as both are false
+console.log(1 || false);//one is truthy value so will print 1 
+console.log('hiii' || false);//will give hiii
+console.log(0 || false); //will print false as both are false
+console.log(0 || true);//will give true
+console.log('hii' || true);//will give hii
+
 
 //our javaScript engine tries to evalue this expression, it looks at each operand
 //if that operand is not a boolean true or false, it will try  to interpret it as truthy or falsey

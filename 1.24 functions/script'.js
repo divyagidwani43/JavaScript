@@ -1,6 +1,7 @@
-//Functions is a piece of code that we can use over and over again like variable but for whole chuncks of code whwn called it executes code inside {}
+//Functions is a piece of code that we can use over and over again like variable but for whole chuncks of code 
+//whwn called it executes code inside {}
 //console.log() is a function itself but it is pre defined and parameters input is given in ()
-//function function_name(input){function property}
+//declaring --->function function_name(input){function property}
 
 
 
@@ -23,7 +24,8 @@ function greet(firstName, lastName) {
 }
 greet('john');                                                             //lastname will display undefined 
 greet('john', 'smith');
-//we cann use the valye created by funtion and use it esle where by declaring it or storung it in varibale
+
+//we cann use the value created by funtion and use it esle where by declaring it or storing it in varibale
 let q = greet('fina', 'matthew');
 
 
@@ -36,29 +38,27 @@ function fruitProcessor(apples, oranges) {                                 //fun
 fruitProcessor(5, 3);                                                      //we can input ant value in () to declare variables even prompt
 
 console.log(fruitProcessor(4));                                            // if given only one input other one will be automatically undefined
-
-const appleJuice = fruitProcessor(prompt('apples'), prompt('oranges'));    //will execute function
-console.log(appleJuice);                                                   //will print return value
-
 console.log(fruitProcessor(8, 9));                                         //will execute and print return value
 
+const appleJuice = fruitProcessor(prompt('enter apples'), prompt('enter oranges'));    //will execute function
+console.log(appleJuice);                                                   //will print return value
 
 
-function sum(a) {
-    console.log(a);
+
+
+function sum(a, b) {
+    console.log(a + b);
 };
 sum(2, 3);                                                                 //will ignore 3
-sum([8, 9]);
-
-sum({ s: 6, h: 8, j: 'w' });
-const d = sum({ h: 7, l: 0 });                                             //now we can call the object
 
 
 
 
 
 //FUNTION DECLARARTION
+//function that can be used before declaration in code lines
 console.log(calcAge1(1994));                                               //we can call funtion early it will still run perfectly but will error in expression
+
 function calcAge1(birthYeah) {
     return 2037 - birthYeah;                                               //storing directly is better than {const age = 2037-birthyear return age;}
 }
@@ -67,6 +67,7 @@ const age1 = calcAge1(1991);
 
 
 //FUNTION EXPRESSION
+// function value stored in variable
 const calcAge2 = function (birthYeah) {                                    //its an anonymous function or func without name stored in a variable that becomes the function name
     return `the age is ${2037 - birthYeah}`;                               //function(birthYeah) { return 2037 - birthYeah;} it can be seen as expression as it producing a value 
 }                                                                          //cant be called early
@@ -79,6 +80,7 @@ console.log(age1, age2);
 
 
 //ARROW FUNTION 
+//cant use this keyword , is one line function
 const calcAge3 = birthYeah => 2037 - birthYeah;                            //Arrow functions    is function expression ie cant be called early
 console.log(calcAge3(1991));                                               //const calcAge3=    is the variable defining the function expression
 const yearsUntilRetirement2 = (birthYeah, firstName) => {                  //birthYeah =>       it is th function parameter and arrow will indicate to return value
@@ -119,12 +121,17 @@ console.log(fruitProcessor2(2, 3));
 
 
 
+function exCode(fruit) {
+    return fruit * 4;    //will exit the function immediately after it returns the value given as return and below code will not be executed
+    console.log('done')
+}
+console.log(exCode(3)) //will only give 12
 
-
-
-
-
-
+function exCode2(fruit) {
+    console.log('done')
+    return fruit * 4;
+}
+console.log(exCode2(4)) //will print done then 16
 
 
 //EX
@@ -144,21 +151,12 @@ let's say 7, we get 7, so
 not divisible by 3 or 5, we get
 the same input. Now if we don't pass a number here, let's say
 we pass a string, we should get this message,*/
-function fizzbuzz(input) {
-    if (input % 3 === 0 && input % 5 != 0) return 'Fizz'
-    else if (input % 5 === 0 && input % 3 !== 0) return 'buzz'
-    else if (input % 5 === 0 && input % 3 === 0) return 'FizzBuzz'
-    else if (typeof input != 'number') return 'Not a num'
-    else if (input % 5 != 0 && input % 3 != 0) return input
+// function fizzbuzz(input) {
+//     if (input % 3 === 0 && input % 5 != 0) return 'Fizz'
+//     else if (input % 5 === 0 && input % 3 !== 0) return 'buzz'
+//     else if (input % 5 === 0 && input % 3 === 0) return 'FizzBuzz'
+//     else if (typeof input != 'number') return 'Not a num'
+//     else if (input % 5 != 0 && input % 3 != 0) return input
 
-}
-console.log(fizzbuzz(47));
-
-
-
-
-
-
-
-
-
+// }
+// console.log(fizzbuzz(47));

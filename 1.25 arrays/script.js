@@ -1,5 +1,5 @@
 let friends = ['Michael', 'Steven', 'Peter'];                                            //declaring array
-console.log(friends);                                                                    // will print (3) i.e length of array than the data
+console.log(friends);                                                                    // will print (3) i.e length of array then the data
 
 const y = new Array(1991, 1984, 2008, 'twenty twenty two');                              //another way to declare array call y array can have multiple data types in js
 console.log(y);

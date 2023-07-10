@@ -1,0 +1,59 @@
+ARRAY
+elements of array are mutable but the whole array isnt
+let friends = ['Michael', 'Steven', 'Peter'];      
+const y = new Array(1991, 1984, 2008, 'twenty twenty two');
+
+friends[0]                                                          
+calling array
+
+friends.length                                                            
+will print array length
+
+friends[friends.length - 1]
+will print last value in array
+
+friends[3] = 'dee';                                                                       
+will add dee at 3 index          
+
+friends[2] = 'Jay';                                                                      
+will overwrite [2] const or let no matter
+
+friends = ['Bob', 'Alice'];                                                              
+will overwrite only when its in let data type const will error 
+
+calling func from array of values--------------------------------------------------------------->
+const calcAge = function (birthYeah) {                                                   
+    return 2037 - birthYeah;
+}
+const years = [1990, 1967, 2002, 2010, 2018];  
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];   
+values of previous array used in another array
+console.log(ages);
+
+
+functions on array------------------------------------------------------------------------------------->
+friends.push('Jay');                                                                     
+Add elements in last
+
+friends.unshift('John');                                                                 
+add in start
+
+friends.pop();                                                                           
+Last element will be deleted
+
+friends.shift();                                                                         
+First element will be removed
+
+console.log(friends.indexOf('Alice'));                                                   
+will display where the element is i.e the index
+no such name now it was there before so it will display -1
+
+console.log(friends.includes('jay'));                                                    
+false array doesnt include jau
+console.log(friends.includes('23'));                                                     
+it has strict coersion it will display false due to string of 23 not the number
+console.log(friends.includes(23));
+will be true                                                     
+
+
+

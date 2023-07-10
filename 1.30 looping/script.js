@@ -20,6 +20,8 @@ do {
 }
 while (i < 30)                                                     //codition
 
+
+
 //FOR -IN LOOP
 //different than other loops this is for iteratioin of objects 
 const object_1 = {
@@ -32,14 +34,13 @@ for (let key in object_1)                                          //key here wi
 
 const object_2 = ['red', 'violet', 'purple'];
 for (let any_name in object_2)                                     //any_name used instead of key it will give 0 and 1 as we access array element via indexing
-    console.log(any_name);
+    console.log(object_2[any_name]);
 
 //FOR OF
 //can only be used for arrays and iterables not objectr
 for (let any_name of object_2)
     console.log(any_name);                                         //will print the content in array seperated through lines ir red violet purple
 
-//BREAK AND CONTINUE
 
 
 
@@ -69,7 +70,7 @@ for (let i = 0; i < jonas.length; i++) {
     console.log(jonas[i], typeof jonas[i]);
     // Filling types array
     types2[i] = typeof jonas[i];
-    types.push(typeof jonas[i]);                                             //pushes the data type of jonas in types array                                                
+    types.push(typeof jonas[i]);                                             //pushes the data type of jonas in types array
 }
 console.log(types);
 
@@ -84,39 +85,19 @@ console.log(ages);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // BREAK AND CONTINUE
-let j = 0;
-while (j < 10) {
-    if (j % 2 === 0) {
-        j++;
-        continue;        // will leave out divisible by 2     
-    }
-    console.log(j);
-    j++;
-
-}
-
-let jj = 0;
-while (jj < 10) {
-    if (jj == 5) break; //will stop increasing j after 5
-    // if (j % 2 === 0) {
-    //     j++;
-    //     continue;
-    // }
-    console.log(jj);
-    jj++;
-
-}
+//continue access the current iteration and move to next one 
+//break terminates the whole loop
 
 console.log('--- ONLY STRINGS ---')
 for (let i = 0; i < jonas.length; i++) {
-    if (typeof jonas[i] !== 'string') continue;
+    if (typeof jonas[i] !== 'string') continue;//if in any iteration it encounters string it just blocks that iteration move to next one
 
     console.log(jonas[i], typeof jonas[i]);
 }
 
 console.log('--- BREAK WITH NUMBER ---')
 for (let i = 0; i < jonas.length; i++) {
-    if (typeof jonas[i] === 'number') break;
+    if (typeof jonas[i] === 'number') break; //after [2] the loop wont run as it runs into number type and break statement breaks loop when if statement becomes false and doesnt run more iterations
 
     console.log(jonas[i], typeof jonas[i]);
 }
