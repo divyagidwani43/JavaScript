@@ -7,6 +7,6 @@
 let age = 12;
 age = 13;
 
-//const is used to define that cant chnage later in code
+//const is used to define that cant chnage later in code can neither have epmty declaration 
 const year = 2023;
 //year=322; //will error
