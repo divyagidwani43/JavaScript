@@ -4,7 +4,7 @@ const restaurant = {
   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "Pasta", "Risotto"],
-  
+
   order: function (starter, main) {
     //`the starter is ${this.starterMenu[starter]} and the main course is ${this.mainMenu[main]}`;
     //wil error as destructing cant be done on string we need array
@@ -67,3 +67,11 @@ const [
   ],
 ] = [2, 4, 5, [3, 4]];
 console.log(h, j, k);                                                            //will give [3,4] as 3,4 no array
+
+//TO ADD IN ARRAY THAT LIES IN OBJECT
+const mainMenuUpdate = [...restaurant.mainMenu, 'spegetti'];
+console.log(mainMenuUpdate);
+
+//TO OPEN ARRAY 
+const mainMenuUpdate2 = [...restaurant.mainMenu];
+console.log(mainMenuUpdate2);   

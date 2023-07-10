@@ -20,8 +20,8 @@ const restaurant = {
     },
   },
 
-  x : function(input1,input2){
-    console.log(input1,input2);
+  x: function (input1, input2) {
+    console.log(input1, input2);
   },
 
   order: function (starterNo, mainNo) {
@@ -31,22 +31,22 @@ const restaurant = {
   },
 
 
-  y:function({time,place,starterNo,mainNo}){                                                                     //make sure its function (  {   }  ) not ()
-    console.log(`your order starter ${this.starterMenu[starterNo]} and 
-    main ${this.mainMenu[mainNo]} will be delivered at ${place} at ${time}`);
-  },
-
-  
-  xx:function(time,place,starterNo,mainNo){                                                                     
+  y: function ({ time, place, starterNo, mainNo }) {                                                                     //make sure its function (  {   }  ) not ()
     console.log(`your order starter ${this.starterMenu[starterNo]} and 
     main ${this.mainMenu[mainNo]} will be delivered at ${place} at ${time}`);
   },
 
 
-  z:function({time ='20:00',                                                                                     //20:00 is the default value id no value entered                                   
+  xx: function (time, place, starterNo, mainNo) {
+    console.log(`your order starter ${this.starterMenu[starterNo]} and 
+    main ${this.mainMenu[mainNo]} will be delivered at ${place} at ${time}`);
+  },
+
+
+  z: function ({ time = '20:00',                                                                                     //20:00 is the default value id no value entered                                   
     place,                                                                                                       //no default value so if no value enetered it will show undefined 
-    starterNo= 1,
-    mainNo}){                                                        											                       //make sure its function (  {   }  ) not ()
+    starterNo = 1,
+    mainNo }) {                                                        											                       //make sure its function (  {   }  ) not ()
     console.log(`your order starter ${this.starterMenu[starterNo]} and 
     main ${this.mainMenu[mainNo]} will be delivered at ${place} at ${time}`);
   }
@@ -54,6 +54,9 @@ const restaurant = {
 
 
 
+
+
+//CALLING PROPERTIES
 const { name, categories } = restaurant;                                                                         //1st  //we can directly call properties like bname location category etc instead of restraunt.name
 console.log(name, categories);
 //same as
@@ -63,13 +66,15 @@ const { name: name_of_restrau, categories: any_variable_name } = restaurant;    
 console.log(name_of_restrau, any_variable_name);
 
 
-
+//INITIALISING TO []
 const { menu = [], starterMenu: starter = [] } = restaurant;                                                     //say menu has no value in restaurant so it will be assigned []value if =[] if not it will  be undefined
 console.log(menu, starter);
 
 
 
 
+
+//INITIALISING VALUE FROM OBJECT TO ALREADY DECLARED VARIABLES
 let a = 33;
 let b = 44;
 let aa = 44;
@@ -79,51 +84,54 @@ a = d.a;
 b = d.b;
 console.log(a, b);
 //same can be done using
-console.log(aa,bb);
+console.log(aa, bb);
 ({ aa, bb } = d);                                                                                                // make sure for (  {  } = ); to assign aa to 3 of d and b to 4 of d
 console.log(aa, bb);
 
 
 
 
-const { thu } = restaurant.openingHours; 
+
+//CALLING OBJECT FROM MAIN OBJECT
+const { thu } = restaurant.openingHours;
 console.log(thu);                                                                                                //1st      //{open: 12, close: 22} for thu
 
 
-
-
-const {openingHours:                                                                                             //2nd
-    { fri },                                                                                                     //access fri of openingHours as fri you can assign fri:f and access fri as f
+const { openingHours:                                                                                             //2nd
+  { fri },                                                                                                     //access fri of openingHours as fri you can assign fri:f and access fri as f
 } = restaurant;
 console.log(fri);                                                                                                //{open: 11, close: 23} for fri
 
-const {fri:                                                                                                      //3rd     //will print a lil differntly
-    { 
-        open :o,                                                               
-        close:c                                                                                                  //access open as o and close as c
-    },
-    } = restaurant.openingHours;
+//CALLING  OBJECT FROM MAIN OBJECT ABD INILISING
+const { fri:                                                                                                      //3rd     //will print a lil differntly
+  {
+    open: o,
+    close: c                                                                                                  //access open as o and close as c
+  },
+} = restaurant.openingHours;
 console.log(o, c);                                                                                               //11 23 for fri
 
 
 
 
+
+//INPUT TO FUNCTION DECLARED IN OBJECT
 // x : function(input1,input2){
 //     console.log(input1,input2);
 //   },
-restaurant.x('22:11','902 effinay street');                                                                      //only the first value will be treated as input
+restaurant.x('22:11', '902 effinay street');                                                                      //only the first value will be treated as input
 restaurant.x({                                                                                                   //we can pass multiple inputs
-    time:'22:11',
-    place : '902 effinay street',
+  time: '22:11',
+  place: '902 effinay street',
 },
   {
-    time:'22:11',
-     place : '902 effinay street',
+    time: '22:11',
+    place: '902 effinay street',
   }
 )                                                                                                               // will display {time: '22:11', place: '902 effinay street'}
 
 
-
+//this is input to funtion
 // xx:function(time,place,starterNo,mainNo){                                                                    
 //   console.log(`your order starter ${this.starterMenu[starterNo]} and 
 //   main ${this.mainMenu[mainNo]} will be delivered at ${place} at ${time}`);
@@ -138,15 +146,18 @@ restaurant.xx(
 
 
 
-// y:function({time,place,starterNo,mainNo}){                                                                      //make sure its function (  {   }  ) not ()
+
+//INOUT TO OBJECT PROPERTY DECLARED INSIDE OBJECT
+//this is input to object created in funtion
+// y:function({time,place,starterNo,mainNo}){                                                                   //make sure its function (  {   }  ) not ()
 //     console.log(`your order starter ${this.starterMenu[starterNo]} and 
 //main ${this.mainMenu[mainNo]} will be delivered at ${place} at ${time}`);
 //   }
-restaurant.y({                                    
-    time:'22:11',                                                                                                //will put time :'22:11' in time variable of function
-    place:'903 efffinay',                                                                                        //if not (  {   }  ) but () this code will error                                            
-    mainNo:1,                                                                                                    //sequence doesn't matter
-    starterNo:2                                                                                                  //name of variable : must be the exact same to access like this 
+restaurant.y({
+  time: '22:11',                                                                                                //will put time :'22:11' in time variable of function
+  place: '903 efffinay',                                                                                        //if not (  {   }  ) but () this code will error                                            
+  mainNo: 1,                                                                                                    //sequence doesn't matter
+  starterNo: 2                                                                                                  //name of variable : must be the exact same to access like this 
 })
 //restaurant.y('22:11','903 efffinay', 2, 1)                                                                     //this will work if bracks of function y are ()
 
@@ -160,8 +171,23 @@ restaurant.y({
 //main ${this.mainMenu[mainNo]} will be delivered at ${place} at ${time}`);
 // }
 restaurant.z({
-    starterNo:2,                        //if not assigned it would be 1            
-    place : '324 effinay'               //if not assigned it would be undefined
-    //time will be 20:00 and mainNo undefined  
+  starterNo: 2,                        //if not assigned it would be 1            
+  place: '324 effinay'               //if not assigned it would be undefined
+  //time will be 20:00 and mainNo undefined  
 
 })
+
+
+
+
+
+//UPDATE OBJECT IN ANOTHER OBJECT
+let obj = {
+  g: 1,
+  b: 3,
+  c: 'ee',
+};
+console.log(obj);
+// console.log(...obj);   //WILL ERROR
+let objUpdate = { ...obj, Q: 5 };
+console.log(objUpdate,)

@@ -13,9 +13,9 @@ for (let variable_name = 1; variable_name <= 10; variable_name++) {
     console.log(`Lifting weights repetition ${variable_name} 🏋️‍♀️`);
 }
 
-// for (let rep = 3; rep < 4; rep+3) {
-//     console.log(`repetition ${rep} 🏋️‍♀️`);
-// } //will have endless loop
+for (let rep = 3; rep < 30; rep += 3) {
+    console.log(`repetition ${rep} 🏋️‍♀️`);
+} //will have endless loop
 
 
 for (let a = 7; a > -10; a--) {

@@ -4,18 +4,34 @@ console.log(friends);                                                           
 const y = new Array(1991, 1984, 2008, 'twenty twenty two');                              //another way to declare array call y array can have multiple data types in js
 console.log(y);
 
+
+//INDEXING
 console.log(friends[0]);                                                                 //calling array
 console.log(y[2 - 1] - 2);                                                               //y[2-1]=1984 then -2 ==1982
 
 console.log(friends.length);                                                             //will print array length
 console.log(friends[friends.length - 1]);                                                //will print last index number
 
+
+
+
+//ADD TO ARRAY
+friends[3] = 'dee';                                                                       //will add dee at 3 index          
+console.log(friends);
+
+
+
+
+//OVERWRITING
 friends[2] = 'Jay';                                                                      //will overwrite [2] const or let no matter
 console.log(friends);
 friends = ['Bob', 'Alice'];                                                              //will overwrite only when its in let data type const will error
 console.log(friends);
 // const friendsWithConst = ['Michael', 'Steven', 'Peter'];
 //friendsWithConst['bob','wick'];                                                        //will error
+
+
+
 
 const firstName = 'Jonas';
 const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];               //arrays can be called inside arrays ,variables can be input , as well as math expression
