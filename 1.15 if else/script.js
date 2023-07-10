@@ -15,7 +15,7 @@ else {
     let century = 21; //needs redefining
     console.log(century);
 }
-//    console.log(century); will error
+//console.log(century); will error
 
 age = 33;
 let drink2;
