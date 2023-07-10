@@ -1,5 +1,8 @@
 // Equality Operators: == vs. ===
 
+console.log(1 === 1);
+console.log('1' === 1);//false
+
 const age = 18; //equates variable to value
 if (age === 18) console.log('=== worked');
 //=== is strict operator it only gives true value when both side are exactly same
@@ -10,6 +13,8 @@ else console.log('=== failed in 18 in string');
 //will give falsy value as age2 is string not a number === wont allow coersion while == will
 
 if (age2 == 18) console.log('== worked with 18 in string');
+
+console.log(1 == '1');
 
 const favourite = prompt("What's your favourite number?");
 console.log(favourite);
