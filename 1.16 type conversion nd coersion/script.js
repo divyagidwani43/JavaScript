@@ -9,7 +9,6 @@ console.log(Number('nume')); //wont convert a string to number
 console.log(23 + 23);
 console.log(String(23) + 23);
 
-
 //type coersion is done on its own like when we log string and number the num is utomatically converted to string
 console.log('i am ' + 23 + ' years old');
 console.log('23' - "3" - 10); //wont coerse
