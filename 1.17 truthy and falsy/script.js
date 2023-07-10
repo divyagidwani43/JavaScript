@@ -1,5 +1,10 @@
+console.log(1 || false);//one is truthy value 
+console.log(0 || false); //will give false as both are false
 
-// 5 falsy values: 0, '', undefined, null, NaN
+//our javaScript engine tries to evalue this expression, it looks at each operand
+//if that operand is not a boolean true or false, it will try  to interpret it as truthy or falsey
+
+// 5 falsy values: 0, '', undefined, null, NaN (Not A Number )
 //false itself also
 //these are the value that produce a false value
 console.log(Boolean(0));
