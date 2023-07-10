@@ -11,6 +11,7 @@ nothing would print as hasDriversLicense is still false and doesnt turn true dur
 but activated mode will tell us that error if statement has a new variable thats not been used helping us catch the error
 */
 
+
 //const interface = 'Audio';
 // const private = 534;
 //will error as interface is a possible keyword or reserve word that might be used in future
