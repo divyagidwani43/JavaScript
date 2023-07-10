@@ -18,7 +18,6 @@ x += 10; // x = x + 10 = 25
 x *= 4; // x = x * 4 = 100
 x++; // x = x + 1
 x--; // x = x - 1
-x--;
 console.log(x);
 
 /*Mark and John are trying to compare their BMI (Body Mass Index), which is 
