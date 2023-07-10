@@ -8,6 +8,8 @@ false only when both false
 not
 if a = true then not a = false
 */
+
+
 // Logical Operators
 const hasDriversLicense = true; // A
 const hasGoodVision = true; // B
