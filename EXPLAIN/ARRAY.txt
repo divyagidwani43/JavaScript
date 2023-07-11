@@ -21,6 +21,7 @@ will overwrite [2] const or let no matter
 friends = ['Bob', 'Alice'];                                                              
 will overwrite only when its in let data type const will error 
 
+
 calling func from array of values--------------------------------------------------------------->
 const calcAge = function (birthYeah) {                                                   
     return 2037 - birthYeah;
