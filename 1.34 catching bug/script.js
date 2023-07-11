@@ -2,8 +2,7 @@ const measureKelvin = function () {
     const measurement = {
         type: 'temp',
         unit: 'celsius',
-
-        // C) FIX
+     // C) FIX
         // value: Number(prompt('Degrees celsius:')),
         value: 10,
     };
