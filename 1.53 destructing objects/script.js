@@ -19,7 +19,6 @@ const restaurant = {
       close: 24,
     },
   },
-
   x: function (input1, input2) {
     console.log(input1, input2);
   },
