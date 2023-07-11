@@ -9,7 +9,6 @@ function one(radius) {
 //CALLING MAIN FUNC
 console.log(one(3));
 
-
 //CALLING THE INSIDE FUNCTION
 console.log(one(7).two);
 
