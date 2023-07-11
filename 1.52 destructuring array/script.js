@@ -4,7 +4,6 @@ const restaurant = {
   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "Pasta", "Risotto"],
-
   order: function (starter, main) {
     //`the starter is ${this.starterMenu[starter]} and the main course is ${this.mainMenu[main]}`;
     //wil error as destructing cant be done on string we need array
