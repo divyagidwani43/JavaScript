@@ -18,3 +18,14 @@ anything producing value for ex
 3+4 , true && variable && var
 
 primtive values declared using const are inmutable but the refernece types like array and object can have their elements mutated even when declared using const
+
+
+SITES
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+all methods that can be required for array
+
+
+
+DEBUG
+we can insert breakpoint by clicking on left side of line end then run one function at one time

@@ -1,4 +1,10 @@
 OBJECTS
+this is a keyword that creates a copy of the object it is called into
+just like we access obj properties this is object's copy so access in same way
+    console.table(measurement); display in tablular manner
+
+
+
 a.firtName = 'john'; 
 will change the firstname
 

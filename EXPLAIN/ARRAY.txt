@@ -31,7 +31,18 @@ values of previous array used in another array
 console.log(ages);
 
 
-functions on array------------------------------------------------------------------------------------->
+using array values directly---------------------------------------------------------------------->
+
+const calcTempAmplitude = function (temps) {
+    let max = temps[0];
+    let min = temps[0];
+.........}
+calcTempAmplitude(temperatures);
+const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
+
+
+
+functions on array------------------------------------------------------------------------------->
 friends.push('Jay');                                                                     
 Add elements in last
 
