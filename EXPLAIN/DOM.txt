@@ -1,0 +1,7 @@
+DOM
+document object model
+allows javas to manipukate html elements , basically a connection point
+automatically created when we load web page
+can be seen as tree strcuture with all elements of html doc in hierarchical way
+document is the entry point of DOM tree 
+DOM is web api i.e a library that we can acess from javas code
