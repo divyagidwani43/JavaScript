@@ -1,4 +1,4 @@
-BASICS -EXPRESSION STATEMENT
+BASICS -EXPRESSION STATEMENT, MATH
 
 console.log             ------------------->to print
 
@@ -10,14 +10,47 @@ prompt                  ------------------->to input in pop up by user
 
 
 
+
+
+
+if you want to use a+=b function declare a outside function
+let currentScore1 = 0;
+if (player0El.classList.contains('player--active')) {
+            currentScore1 += dice;
+            current0El.textContent = currentScore1;
+        }
+otherwise if dice value changes current score wont add dice value but replace from it adding dice value from 0
+
+
+
+
+
+if (!guessValue) {}
+guessValue being input when no input above will execute
+
+const diceNum = Math.trunc(Math.random() * 6) + 1;
+
+
+
+
+
+
+primtive values declared using const are inmutable but the refernece types like array and object can have their elements mutated even when declared using const
+
+
+
+
+
+
 STATEMENT
 may or may not produce a value but does an action for ex- if else statement switch statement
+
+
 
 EXPRESSION
 anything producing value for ex
 3+4 , true && variable && var
 
-primtive values declared using const are inmutable but the refernece types like array and object can have their elements mutated even when declared using const
 
 
 SITES

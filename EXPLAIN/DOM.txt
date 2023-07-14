@@ -5,3 +5,102 @@ automatically created when we load web page
 can be seen as tree strcuture with all elements of html doc in hierarchical way
 document is the entry point of DOM tree 
 DOM is web api i.e a library that we can acess from javas code
+
+
+
+
+
+document.querySelector('.class').textContent = "any text you wanna display";
+
+
+document.querySelector('.class').value                                                    -the above value is seen as string
+
+
+document.querySelector('.class').addEventListener(
+    'the event',
+    function () {})
+
+
+document.querySelector('body').style.backgroundColor = 'green'                            -do not do background-color while in js use camel notation convert every - of css to caps first 
+
+
+document.querySelector('.number').style.width = '30rem'
+
+
+
+
+
+
+const btns =document.querySelector('.show-modal');
+console.log(btns);                                                                        -will show one of the buttons
+
+const btnsOpenModal =document.querySelectorAll('.show-modal');
+console.log(btnsOpenModal);                                                               -will show all 3 buttons
+                                                                                          -this can be accessed like an array and have operation of dom
+for (let i = 0; i<btnsOpenModal.length;i++){
+    console.log(btnsOpenModal[i]);
+    console.log(btnsOpenModal[i].textContent);                                            -will display the content of that class
+}
+
+
+
+
+   
+const score0 = document.querySelector('#score--0');
+const score1 = document.getElementById('score--1');
+// the above is used to get id elements without #
+
+
+
+
+
+modal.classList.contains('hidden')
+modal.classList.remove('hidden')                                                          -const modal = document.querySelector('.modal'); above using above we can remove hidden from
+                                                                                           class=moden-hidden in html this can also add and check if a class has something or not
+diceEl.src = `dice-${diceNum}.png`                                                        -to set image in manipulate src string in html
+
+player0El.classList.toggle('player--active');                                             -if it has 'player--active' it will be removed otherwise added
+
+
+
+
+
+
+
+
+
+
+
+POR
+let currentScore2 = 0;
+first declare then use do not declare in function itself it will take value from there only and everytime value =0 in function
+btnRoll.addEventListener('click', function () {
+    // 3. Check if dice roll value is 1
+    if (dice != 1) {
+            currentScore1 += dice;
+            current0El.textContent = currentScore1;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+TOR
+document.querySelector('.guess').value = 21;
+// used to manipulate value of input field
+
+document.querySelector('.message').textContent = "any text you wanna display";
+querySelector selects the class .message defined in css and html textContent will display the message contained in that class
+       <p class="message">Start guessing...</p>
+
+document.querySelector('.class').addEventListener(
+    'the event',
+    function () {
+        // whatever we type here will be executed on click we can also use dom manipulation})
