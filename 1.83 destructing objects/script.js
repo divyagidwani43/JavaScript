@@ -61,7 +61,7 @@ console.log(name, categories);
 //same as
 console.log(restaurant.name, restaurant.categories);                                                             //dont need to use indexing as done in array to assign values
 //same as
-const { name: name_of_restrau, categories: any_variable_name } = restaurant;                                     //2nd  // here restraunt.name is assigned to name_of_restraunt even without the first way to assign it will work  
+const { name: name_of_restrau, categories: any_variable_name } = restaurant;                                     //2nd  // here restraunt.name is assigned to name_of_restraunt we use this when we want to call properties of obj with names of out choice
 console.log(name_of_restrau, any_variable_name);
 
 
@@ -79,6 +79,7 @@ let b = 44;
 let aa = 44;
 let bb = 55;
 const d = { a: 3, b: 4, aa: 3, bb: 4 };
+console.log(a, b)
 a = d.a;
 b = d.b;
 console.log(a, b);
@@ -158,7 +159,7 @@ restaurant.y({
   mainNo: 1,                                                                                                    //sequence doesn't matter
   starterNo: 2                                                                                                  //name of variable : must be the exact same to access like this 
 })
-//restaurant.y('22:11','903 efffinay', 2, 1)                                                                     //this will work if bracks of function y are ()
+// restaurant.y('22:11', '903 efffinay', 2, 1)                                                                     //this will work if bracks of function y are ()
 
 
 

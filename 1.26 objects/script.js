@@ -16,7 +16,7 @@ const a = {                                                                     
     hasDriversLicence: true,
     dk: 44,
 
-    calcAge: function (birthyear) {                                                                            //its the same as function age = calcAge(birthyear){return 2023-birthyear}         
+    calcAge: function (birthyear) {                                                                            //its the same as function calcAge (birthyear){return 2023-birthyear}         
         return 2023 - birthyear;                                                                               //function attached to an object is called method       
     },                                                                                                         //funtion mus be entered in ax expression manner not declaartion as objects only accept expression as expression produces value held by pro[erty of object
 
@@ -164,7 +164,8 @@ console.log(a.calcAge(1991));
 a.calcAge2();
 
 a.calcAge3()
-console.log(a.new);
+console.log('fcgtrjfgcrdjcfrtdfrtjfh')
+console.log(a.new);//will only print 32 when above calcage3 func is called as this.new property is created here if not called new property wont exist
 
 
 
