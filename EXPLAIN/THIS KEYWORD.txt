@@ -1,0 +1,10 @@
+THIS KEYWORD
+point to window obbject if not in strict mode
+IN arrow func
+window object in arrow function as it dont get its own this keyword defined
+so it uses this keyword definition of its parent function here thats global i.e window object
+in normal function in object
+this takes up the value of the object as object not because it is called in obj object 
+but because we call the function using obj.a i.e obj calls the function so this takes up the obj value 
+console.log(this.age);
+so we can use object action on this keyword

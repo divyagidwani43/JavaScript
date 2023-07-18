@@ -1,0 +1,10 @@
+HOISTING ,BEFORE DECLARATION 
+
+var - undefined
+let or const - error can't access befor initialization 
+function declaration - can be called
+function expression = variable   -error if let const undefined if var
+
+
+// var varible is part of window function created by js can be accessed by window.x x=variable declared using var
+// not same for const and let
