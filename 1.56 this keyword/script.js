@@ -48,4 +48,3 @@ console.log(obj2)
 console.log('breakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk')
 obj2.a()
 // now this takes up the value of obj2 as it is the one calling it
-
