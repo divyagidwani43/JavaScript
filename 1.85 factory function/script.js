@@ -14,4 +14,3 @@ console.log(one(7).two);
 
 const a = one(7);
 console.log(a.two);
-
