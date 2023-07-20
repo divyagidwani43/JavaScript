@@ -15,7 +15,6 @@ const current1El = document.querySelector('#current--1');
 const player0El = document.querySelector('.player--0');
 const player1El = document.querySelector('.player--1');
 
-
 //starting conditions
 diceEl.classList.add('hidden');
 //score
