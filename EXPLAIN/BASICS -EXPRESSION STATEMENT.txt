@@ -9,7 +9,7 @@ prompt                  ------------------->to input in pop up by user
 \n\ or `line_change_using_enter`
 
 
-
+const variables are only immutable if its for primitive values 
 
 
 

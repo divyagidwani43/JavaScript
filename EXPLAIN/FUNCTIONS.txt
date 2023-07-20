@@ -23,6 +23,17 @@ const func_name = function (input) {
 
 ARROW FUNTION 
 is function expression
-const func_name= input =>return value
+const func_name= input => {statement return value}
+if not statement just write return value with no {} 
 
 
+
+
+
+
+orderPasta(ing1, ing2, ing3) {
+    console.log(`Here is your declicious pasta with ${ing1}, ${ing2} and                  
+                 ${ing3}`);},
+const ingredients = ['mushroom', 'olive', 'peperoni'];
+restaurant.orderPasta(...ingredients);
+// a way to give inputs to function using array

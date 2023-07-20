@@ -1,0 +1,18 @@
+CLONING OBJECTS
+
+const friend2 = Object.assign({}, me);
+
+will create an empty object {} and merge me object to it 
+any change in property's value will not reflect in 'me' object
+but in array it would reflect in all copies of object as it is deeply nested so USE SPREAD OPERATOR INSTEAD
+
+
+const friend3 = Object.assign({ DOB: 1992, lastNAme: 'willams' }, me)
+
+will add the mentioned values as well without reflecting any change in any other objects
+
+
+
+USE SPREAD OPERATOR INSTEAD
+friend3.reletive = [...friend3.reletive, 'bro'];
+will add bro to only friend3 not the other copies of it neither the main it is a copy of

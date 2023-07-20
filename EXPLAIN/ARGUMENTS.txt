@@ -1,0 +1,10 @@
+ARGUMENTS
+
+IN REG FUNC
+    console.log(arguments)
+    // will have all arguments given in ()
+
+IN ARROW FUNC
+    // console.log(arguments)
+    // will error
+    // doesnt have arguments keyword defined
