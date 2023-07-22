@@ -1,4 +1,5 @@
 'use strict';
+// instructor starst
 const score = document.querySelectorAll('.score');
 const scoreTo0 = function () {
     for (let i = 0; i < score.length; i++) {
