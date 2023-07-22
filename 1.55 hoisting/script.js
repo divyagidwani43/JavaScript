@@ -12,7 +12,7 @@ console.log(addDecl(2, 3));
 //error as declared using const and is expression so behave like variable
 console.log(addArrow);
 //undefined as it it arrow so an variable and declared using var 
-// console.log(addArrow(2, 3)); error with values
+// console.log(addArrow(2, 3)); error with values in var 
 
 function addDecl(a, b) {
     return a + b;
