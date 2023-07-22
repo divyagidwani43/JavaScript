@@ -21,8 +21,7 @@ const a = {                                                                     
 a.calcAge2();
 console.log('line change')
 console.log(a.calcAge2())
-
-/* Write your code below. Good luck! 🙂 */
+// below is the code answer
 
 const mark = {
     fullName: 'Mark Miller',
