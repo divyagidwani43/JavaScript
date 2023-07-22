@@ -8,8 +8,10 @@ const year = 1991;
 
 // Functions
 console.log(addDecl(2, 3));
-// console.log(addExpr(2, 3)); //error as declared using const and is expression so behave like variable
-console.log(addArrow);  //undefined as it it arrow so an variable and declared using var 
+// console.log(addExpr(2, 3)); 
+//error as declared using const and is expression so behave like variable
+console.log(addArrow);
+//undefined as it it arrow so an variable and declared using var 
 // console.log(addArrow(2, 3)); error with values
 
 function addDecl(a, b) {
