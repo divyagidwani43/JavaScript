@@ -7,3 +7,6 @@ case(v_n_value2)
 break;
 .....
 
+if (restaurant.orderPizza) {
+    // will see it above exists
+}
