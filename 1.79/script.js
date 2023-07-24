@@ -2,7 +2,7 @@
 
 // A poll has a question, an array of options from which people can choose, and an array with the number of replies for each option. This data is stored in the starter object below.
 
-// Here are your tasks:
+//tasks:
 
 // 1. Create a method called 'registerNewAnswer' on the 'poll' object. The method does 2 things:
 //   1.1. Display a prompt window for the user to input the number of the selected option. The prompt should look like this:
