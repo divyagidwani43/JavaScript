@@ -1,0 +1,14 @@
+EXPRESSSIONS - TERNARY, FUNCTION
+
+
+const drink = age >= 18 ? 'wine 🍷' : 'water 💧';
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+FUNTION EXPRESSION
+const func_name = function (input) {
+          property
+}
+
+ARROW FUNTION 
+is function expression
+const func_name= input =>return value
