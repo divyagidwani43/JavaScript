@@ -1,4 +1,4 @@
-1.64 SHORT CIRCUIT , NULLISH
+1.64 SHORT CIRCUIT , NULLISH , LOGICAL OPERATORS
 
 OR
 it will short circuit when it encounter truthy value and execution will stop

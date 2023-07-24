@@ -1,0 +1,35 @@
+THIS KEYWORD
+point to window obbject if not in strict mode
+
+IN arrow func in objects 
+window object in arrow function as it dont get its own this keyword defined
+so it uses this keyword definition of global function  i.e window object
+arrow function doesnt have this keyword so no matter where it is called it will
+have window object in this keyword and values declared by var will hold a place in
+window object but let and const wont have the same place in window
+
+in normal function in object
+this takes up the value of the object as object not because it is called in obj object 
+but because we call the function using obj.a i.e obj calls the function so this takes up the obj value 
+console.log(this.age);
+so we can use object action on this keyword
+will take up jonas object in this keyword
+
+
+IN REG FUNCTION INSIDE REG FUNCTION
+will be undefined as inside any function call this keyword is undefined
+SOLU->func3: function () {
+        const any_name = this;
+        const func4 = function () {
+            console.log(any_name)
+instead of this use any_name
+SOLU->func4: function () {
+        console.log('func4 and solving above undefined')
+        const func4 = () => {
+            console.log(this)
+arrow function doesnt have this keyword so for this arrow here this would 
+have parent value i.e of the object
+
+
+
+    
