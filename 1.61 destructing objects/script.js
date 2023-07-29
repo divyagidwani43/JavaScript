@@ -52,8 +52,9 @@ const restaurant = {
 };
 
 
-
-
+// PRACTICAL
+const { openingHours: { thu: any } } = restaurant
+console.log(any)
 
 //CALLING PROPERTIES
 const { name, categories } = restaurant;                                                                         //1st  //we can directly call properties like bname location category etc instead of restraunt.name

@@ -13,7 +13,8 @@ for (let i = 0; i < array_name.length; i++) {
     console.log(array_name[i])
 }
 
-// same can be done by for of loop 
+// same can be done by for of loop
+// for of loop can be used for any iterable 
 console.log('------------------------------------------------------------------------')
 for (const any_name of array_name) console.log(any_name)
 

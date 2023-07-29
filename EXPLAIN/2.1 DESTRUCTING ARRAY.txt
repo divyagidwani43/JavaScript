@@ -54,3 +54,10 @@ const mainMenuUpdate = [...restaurant.mainMenu, 'spegetti'];
 //TO OPEN ARRAY 
 const mainMenuUpdate2 = [...restaurant.mainMenu];
 
+
+
+
+
+
+// console.log(oddss[0]) //(2) ['team1', 1.33]
+// console.log(oddss[0][0]) //team1
