@@ -9,3 +9,15 @@ ENHANCED OBJECT LITERALS
     },
 
 objects declared outside can be called directly
+
+
+
+const a ={
+...data
+}
+
+const obj={
+a,
+//a data will be displayed here
+jk:22,
+}
