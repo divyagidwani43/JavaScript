@@ -1,28 +1,14 @@
-// Functions Accepting Callback Functions
+
 const oneWord = function (str) {
-    return str.replace(/ /g, '').toLowerCase();
+    return str.replaceAll(" ", '').toLowerCase();
 };
 
 const upperFirstWord = function (str) {
     const [first, ...others] = str.split(' ');
+    console.log(others, ...others)
     return [first.toUpperCase(), ...others].join(' ');
 };
+console.log(oneWord("javaScript is hard"))
+console.log(upperFirstWord("javaScript is hard"))
 
-// Higher-order function
-const transformer = function (str, fn) {
-    console.log(`Original string: ${str}`);
-    console.log(`Transformed string: ${fn(str)}`);
-
-    console.log(`Transformed by: ${fn.name}`);
-};
-
-transformer('JavaScript is the best!', upperFirstWord);
-transformer('JavaScript is the best!', oneWord);
-
-// JS uses callbacks all the time
-const high5 = function () {
-    console.log('👋');
-};
-document.body.addEventListener('click', high5);
-['Jonas', 'Martha', 'Adam'].forEach(high5);
-
+// HIGH - ORDER FUNCTION
