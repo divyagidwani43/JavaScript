@@ -29,7 +29,8 @@ checkIn(flight, jonas)
 
 //refer to primitive vs reference
 console.log(flight) //will show not changed flight
-// cz we copied the flight variable value to flightNum and then changed it (i.e it will point to new location where updated value is saved) did not change the original value
+// cz we copied the flight variable value to flightNum and then changed it 
+// (i.e it will point to new location where updated value is saved) did not change the original value
 console.log("jonas.passport = ", jonas.passport)
 console.log(jonas)  //will show changed name that was done in function
 // cz the reference types are stored in diff stack and copy made of original points to the same adress as of original
