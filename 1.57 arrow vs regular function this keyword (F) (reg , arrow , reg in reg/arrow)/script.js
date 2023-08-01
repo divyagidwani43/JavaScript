@@ -5,16 +5,19 @@ const jonas = {
     firstName: "jonas",
     age: 23,
 
+    // REG
     calcAge: function () {
         console.log(this)
         console.log(this.age)
     },
 
+    // ARROW
     greet: () => {
         console.log(this)
         console.log(this.age)
     },
 
+    // REG IN REG FAIL THIS KEYWORD
     func1: function () {
         console.log('func1 done');
         const func2 = function () {
@@ -25,6 +28,7 @@ const jonas = {
         func2();
     },
 
+    // REG IN REG PASS THIS KEYWORD
     func3: function () {
         console.log('func3 and solving above undefined')
         const any_name = this;
@@ -37,6 +41,7 @@ const jonas = {
         func4();
     },
 
+    // ARROW IN REG PASS THIS KEYWORD
     func4: function () {
         console.log('func4 and solving above undefined')
         const func4 = () => {
@@ -48,6 +53,7 @@ const jonas = {
         func4();
     }
 }
+
 jonas.greet()
 // arrow function doesnt have this keyword so no matter where it is called it will
 // have window object in this keyword and values declared by var will hold a place in
