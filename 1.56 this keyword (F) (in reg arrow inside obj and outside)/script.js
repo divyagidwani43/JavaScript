@@ -3,6 +3,7 @@
 console.log(this);
 // point to window obbject if not in strict mode
 
+// REG FUNC
 const a = function () {
     console.log('in function');
     console.log(this);
@@ -10,7 +11,7 @@ const a = function () {
 }
 a();
 
-
+// ARROW
 const aa = () => {
     console.log('in arrow function');
     console.log(this);
@@ -19,9 +20,12 @@ const aa = () => {
 }
 aa();
 
+// OBJECT
 const obj = {
     age: 14,
     des: console.log('inside methods'),
+
+    // REG
     a: function () {
         console.log('in normal function in object');
         console.log(this);
@@ -30,6 +34,8 @@ const obj = {
         console.log(this.age);
         // so we can use object action on this keyword
     },
+
+    // ARROW
     aa: () => {
         console.log('in arrow function in object');
         console.log(this);
@@ -39,6 +45,7 @@ const obj = {
 obj.a()
 obj.aa()
 
+// COPYING A FUNC FROM OBJ1 TO OBJ2 WITH THIS KEYWORD
 const obj2 = {
     age: 33,
 }
