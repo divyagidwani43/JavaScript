@@ -2,11 +2,15 @@ THIS KEYWORD
 point to window obbject if not in strict mode
 
 IN arrow func in objects 
-window object in arrow function as it dont get its own this keyword defined
+window object 
+
+in arrow function as it dont get its own this keyword defined
 so it uses this keyword definition of global function  i.e window object
 arrow function doesnt have this keyword so no matter where it is called it will
 have window object in this keyword and values declared by var will hold a place in
 window object but let and const wont have the same place in window
+
+
 
 in normal function in object
 this takes up the value of the object as object not because it is called in obj object 
@@ -28,8 +32,4 @@ SOLU->func4: function () {
         const func4 = () => {
             console.log(this)
 arrow function doesnt have this keyword so for this arrow here this would 
-have parent value i.e of the object
-
-
-
-    
+have parent value i.e of the obj

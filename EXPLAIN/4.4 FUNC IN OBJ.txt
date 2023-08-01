@@ -1,0 +1,11 @@
+FUNC IN OBJ
+const obj = {
+
+  displayResults,
+
+  registerNewAnswer() {
+    this.displayResults(prompt("type"))
+    // this must be before register new function to be called inside register function in objects
+  }
+
+}
