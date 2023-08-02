@@ -1,0 +1,11 @@
+// Looping Objects: Object Keys, Values, and Entries
+
+Object.keys(openingHours)
+// is an array of all property names
+
+const values = Object.values(openingHours);
+// array of property values
+
+
+const entries = Object.entries(openingHours);
+// whole object divided by arrays in array[[prop names , values] , ....]

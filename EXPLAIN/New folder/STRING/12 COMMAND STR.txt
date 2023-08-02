@@ -1,0 +1,3 @@
+COMMAND STR
+options.join
+options=array joined into string
