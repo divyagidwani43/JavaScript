@@ -24,16 +24,13 @@ console.log(StrWthNum.indexOf("A"))
 console.log(anyStr.indexOf("Portugal"))
 console.log(StrWthNum.indexOf("Portugal")) //if not in string it will give -1
 
-//index
 // SLICE
 console.log(anyStr.slice(3)) //the begin index will be 3 not 0 , 3 included
 // this doesn't change the original string as it is not possible to mutate primitives but this returns a new string
 console.log(anyStr.slice(3, 6)) //index start at 3 end at 6
-
 // get string frm 0 to first space ir tap
 console.log(anyStr.slice(0, anyStr.indexOf(" ")))
 console.log(anyStr.slice(anyStr.lastIndexOf(" ") + 1))
-
 console.log(anyStr.slice(-3)) //will index from end
 
 
@@ -50,7 +47,6 @@ console.log(strWthSpce)
 console.log(strWthSpce.trim())
 console.log(strWthSpce.trimEnd())
 console.log(strWthSpce.trimStart())
-
 // Comparing emails
 const email = 'hello@jonas.io';
 const loginEmail = '  Hello@Jonas.Io \n';
@@ -62,7 +58,6 @@ const inr = 'Rs 1000'
 const dollar = inr.replace('Rs', "$").replace("1000", 1000 / 75)
 console.log(dollar)
 // returns a new string not replace the old so we can directly do console log
-
 const str = "hey hii hey"
 console.log(str.replace("hey", "namaste"))//will only change one hey finding from start
 // will replace all occurances
@@ -85,7 +80,7 @@ const str2 = "Socks and camera"
 console.log(str2.split(" and ")) // will split the string at and create an array of values
 const [item1, item2] = str2.split(" and ")
 console.log(item1, item2)
-
+// another
 const naame = "divya gidwani"
 const [first, last] = naame.split(" ")
 console.log(first, last, naame.split(" "))
@@ -93,7 +88,7 @@ console.log(first, last, naame.split(" "))
 // JOIN
 const naameJoin = ["ms".toUpperCase(), first.toUpperCase(), last.toUpperCase()].join("--any--")
 console.log(naameJoin)
-
+// concat - way to join
 const str1 = 'Hello';
 const str22 = 'World';
 console.log(str1.concat(' ', str22));
@@ -106,8 +101,7 @@ console.log(str22.concat(', ', str1));
 const mess = "go to gate 23! "
 console.log(mess.padStart(25, "anySymbol ")) //will make size of string 25 by adding + in front
 console.log(mess.padEnd(25, "+")) //will add in end
-
-// show only the last four digit of credit card
+// show only the last four digit of credit card?
 const cardNo = '2334 5443 6676'
 console.log(cardNo.slice(-4).padStart(cardNo.length, "*"))
 
