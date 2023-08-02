@@ -1,0 +1,10 @@
+IIFE
+(function () {
+    console.log(`
+the function doesn't have a name so can't be called only way to call it is add () in end and cover function in () to remove error that can only be done once
+                `)
+               })();
+
+// arrow
+(() => console.log("IIFE arrow function"))();
+

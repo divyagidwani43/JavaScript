@@ -1,0 +1,59 @@
+FUNCTION ARGUMENTS , FIRST HIGH , FUNC RETURN FUNC, CALL APPLY BIND
+const func_name = function (
+    para1
+    , para2TicketNum = 1 //default value if not given in function
+    , para3price = 199 * para2TicketNum //if value not put it would calculate on its own using para 2  
+) {}
+
+
+func_name("LH111", undefined, 5)
+//unefined will use the default val for para2 while giving argument to para3
+
+----------------------------------------------------------------------------------------------------------------
+If we change any property's value of object in function it will reflect in original object after function is called
+
+
+----------------------------------------------------------------------------------------------------------------
+FIRST ORDER
+const upperFirstWord = function (str) {
+    return str.replaceAll(" ", '').toLowerCase();
+};
+
+HIGH ORDER
+const transform = function (str, fn) {
+    console.log(fn(str)) //will call upperFirstWord func on str value
+    fn.name //will give the original func name fn is copy of
+}
+transform("javaScript is hard", upperFirstWord)
+//instead of writing thw whole function code of upperFirst word
+// we jusr pass in into func using arguments 
+
+----------------------------------------------------------------------------------------------------------------
+FUNC RETURN FUNC
+const greet = function (greeting) {
+    return function (greets) {
+        console.log(greeting, greets)
+    }
+}
+const greetFn = greet("hello")
+greetFn("Divya")
+greet("hii")("remo")
+
+
+----------------------------------------------------------------------------------------------------------------
+CALL METHOD
+book.call(obj2, //obj this keyword must point to
+    22,         //arguments
+    "Sarah Smith")
+APPLY
+const personData1 = [44, "Fina Falcone"]
+book.apply(obj2, personData1) //obj1 is neccessary outside array
+
+----------------------------------------------------------------------------------------------------------------
+
+BIND
+const luftansa_eq = func_name.bind(luftansa) //luftansa_eq is now function inside luftansa
+luftansa_eq(33, "Remo Falcone") //obj is set to luftansa using bind
+
+const EU23 = func_name.bind(eurowings, 22) //the object for this keyword and the first argumnent is set in bind
+EU23("Nino Falcone") //second argument given

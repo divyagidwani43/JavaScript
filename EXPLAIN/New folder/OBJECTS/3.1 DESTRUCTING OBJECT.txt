@@ -1,0 +1,39 @@
+DESTRUCTING OBJECT
+const { name, categories } = restaurant;                                                                         
+console.log(restaurant.name, restaurant.categories);                                                             
+const { name: name_of_restrau, categories: any_variable_name } = restaurant;
+const { menu = [], starterMenu: starter = [] } = restaurant;                                             if =[] it will  be undefined
+
+
+
+let aa = 44;
+let bb = 55;
+const d = { a: 3, b: 4, aa: 3, bb: 4 };
+({ aa, bb } = d);                                        3,4
+
+
+//CALLING OBJECT FROM MAIN OBJECT
+const { thu } = restaurant.openingHours;
+
+
+const { openingHours:                                                                                             
+ { fri },                                                                                                    
+} = restaurant;
+
+
+//CALLING  OBJECT FROM MAIN OBJECT ABD INILISING
+const { fri:                                                                                                      
+  {
+    open: o,
+    close: c                                                                                                  
+  },
+} = restaurant.openingHours;
+
+
+x:function ()  
+var.x()
+
+x:function({})
+var.x({})
+
+let objUpdate = { ...obj, Q: 5 };
