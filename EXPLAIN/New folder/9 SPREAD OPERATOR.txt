@@ -1,0 +1,43 @@
+SPREAD OPERATOR
+const arr2 = [4, 5, 6];
+const arr = [1, 2, 3, arr2[0], arr2[1], arr2[2]];
+//same as 
+const arr3 = [1, 2, 3, ...arr2]                                                           
+
+
+
+let objUpdate = { ...obj, Q: 5, ARR: [3, 3, 3] }; //updated clone
+
+
+
+mainMEnu is part of objects 
+const mainMenuUpdate = [...restaurant.mainMenu, 'spegetti'];
+console.log(mainMenuUpdate);
+//main menu will have all above and an update
+// a copy version of array is created and manipulated without destroying the main array
+
+
+
+restaurant.mainMenu.push('burger')
+console.log(restaurant.mainMenu)
+// another way to add to but it would change the main object itself not create an updated version like in above
+
+
+
+
+// UPDATING A CLONE
+// const copyOfRestrau = Object.assign({}, restaurant);
+// both have same result try commenting any one
+const copyOfRestrau = { ...restaurant }
+// any change made in copyOfRestrau wont reflect in main restrau object as long as its not array
+copyOfRestrau.mainMenu.push('tacos');
+// will update both
+// SOLU-> to change array but only in the copy version
+copyOfRestrau.mainMenu = [...copyOfRestrau.mainMenu, 'spegetti', 'enchiladas']
+// the array update will only reflect in object copy
+
+
+
+const ingredients = ['mushroom', 'olive', 'peperoni'];
+restaurant.orderPasta(...ingredients);
+// a way to give inputs to function using array

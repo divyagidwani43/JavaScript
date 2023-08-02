@@ -1,0 +1,17 @@
+FOR OF , ARRAY FUNCTIONS
+we can use for of for any iterable
+on array------------------------------------->
+
+for (const any_name of array_name) console.log(any_name)
+
+for (const any_name2 of array_name.entries()) console.log(any_name2);
+// i.e [arrayIndex, value]
+
+// any_name is array that has [arrayIndex, value] any_name[0]=arrayIndex any_name[1]=value 
+// then [value here keeps on increasing by one until whole array values are done]
+
+for (const any_name2 of array_name.entries()) console.log(`${any_name2[0] + 1} : ${any_name2[1]}`);
+
+
+for (const [index_name, value_name] of array_name.entries()) console.log(`${index_name + 1} : ${value_name}`)
+
