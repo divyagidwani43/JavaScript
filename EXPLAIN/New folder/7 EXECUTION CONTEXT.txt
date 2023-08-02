@@ -1,0 +1,6 @@
+EXECUTION CONTEXT
+1-variable component
+2-scope chain
+3-this keyword
+
+series how execution happens

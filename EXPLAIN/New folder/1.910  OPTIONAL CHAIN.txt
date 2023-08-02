@@ -1,0 +1,22 @@
+1.910 ?? OPTIONAL CHAIN 
+restaurant.openingHours.fri?.open
+// print open value if restaurant.openingHours.fri exists if not exist it return undefined
+// exists here refers to nullish concept only null and undefined come under not exist
+
+
+restaurant.openingHours[mon]?.open ?? 'closed';
+// if restaurant.openingHours[mon] doesn't exist the later code wont be read and return undefined
+// exists here refers to nullish concept only null and undefined come under not exist
+// const open = restaurant.openingHours[day]?.open || 'closed';
+// the above would give close at 0 and '' as well so use nullish ??
+// ?? --> will give closed instead of undefined when day isnt thu fri sat
+    
+
+
+// ON Methods
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+// if restaurant.order exists then give it 0 1 as input otherwise ??
+
+// ON Arrays
+const users = [{ name: 'Jonas', email: 'hello@jonas.io' }];
+console.log(users[0]?.name ?? 'User array empty');

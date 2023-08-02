@@ -1,0 +1,18 @@
+1.55 HOISTING
+
+called before declaration
+var- undefined
+let- error
+const-error
+
+normal function declaration -OK
+other = variable expression -above order depending on how declared- var let const
+
+// numproducts = undefined as declared below using var and undefined = falsy so !numproduct=true
+if (!numProducts) deleteShoppingCart();
+
+var numProducts = 10;
+
+
+var varible is part of window  object function created by js can be accessed by window.x
+x=variable declared using var

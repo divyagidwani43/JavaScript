@@ -1,0 +1,41 @@
+1.64 SHORT CIRCUIT , NULLISH , LOGICAL OPERATORS
+
+OR
+it will short circuit when it encounter truthy value and execution will stop
+if all are false the last one will be taken
+
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+const guests2 = restaurant.numGuests || 10;
+rest1.numGuests ||= 10;
+
+
+
+
+
+
+AND
+&& short circuits and returns the first falsy value it encounters
+when all truthy the last value is returned
+
+if (restaurant.orderPizza) {
+    restaurant.orderPizza('mushrooms', 'spinach');
+}
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+
+
+// rest1.owner = rest1.owner && '<ANONYMOUS>';
+// the above would give undefined as owner property value but below would return nothing
+rest1.owner &&= '<ANONYMOUS>';
+
+
+
+
+
+
+
+
+NULLISH
+will only short circuit if value of restaurant.numGuests is null or undefined not at 0 or any other falsy
+
+const guestCorrect = restaurant.numGuests ?? 10;
+rest1.numGuests2 ??= 10;
