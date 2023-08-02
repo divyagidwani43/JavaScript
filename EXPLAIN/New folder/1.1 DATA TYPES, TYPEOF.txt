@@ -1,0 +1,18 @@
+DATA TYPES, TYPEOF
+automatic detection
+
+//number - has all decimal and non decimal
+//string - must be in quotes
+//boolean - either true or false
+//undefined - variable declared but value not assigned
+//null
+//symbol (ES2015) - defines a unique value
+//bigint - number too large to fit into number type
+In static languages, when we declare a
+variable, the type of the variable is set and it cannot be changed
+in the future. In a dynamic language like JavaScript,
+the type of a variable can change at run time.
+
+
+// typeof shows us the type of data that value holds
+console.log(typeof true);

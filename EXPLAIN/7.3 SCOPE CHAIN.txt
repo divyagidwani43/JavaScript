@@ -5,3 +5,6 @@ all variables in parent function are avaible in child function
 if any global var is called in child function it must be declared before the function is called otherwise when the function is called and global var is declared afterwards it would not be accessible to function- refer to code
 
 var created in if can be accessed outside if block but only outside if block not outside function block
+
+
+any variable declared inside function can only be accessed in that function to be used outside it must be declared outside

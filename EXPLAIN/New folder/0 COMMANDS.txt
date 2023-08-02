@@ -1,0 +1,6 @@
+0 COMMANDS
+object              var_type var_name ={}
+array               var_type var_name =[]
+
+cloning object      var_type var_name = Object.assign({value_to_add},name_of_object_we_cloning) 
+
