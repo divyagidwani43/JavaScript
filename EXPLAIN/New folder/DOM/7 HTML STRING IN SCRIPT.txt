@@ -1,0 +1,21 @@
+HTML STRING IN SCRIPT
+
+// getting html string , can be any name not neccessary html
+    const html = `
+    <div class="movements__row">
+      <div class="movements__value">${mov}</div>
+    </div>`;
+//here we put dynamic values that can change over time and remove hardcoded data
+    
+    
+
+// ADDING HTML STRING
+    class_name.insertAdjacentHTML( position in which we want to add html , string)
+// POSITIONS - afterbegin , beforebegin , beforeend , afterend
+
+
+
+
+  // we arent overwriting anything the data present before this function call are still there as they are in html file hardcoded
+  // to remove those we -
+  containerMovements.innerHTML = '';

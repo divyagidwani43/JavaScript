@@ -1,0 +1,23 @@
+ARRAY METHODS
+// SLICE (N-M)
+console.log(arr.slice(0, 2))    //just like string we can get fron [0] to [2] index not include [2] include[0]
+
+
+
+// SPLICE (M)
+// same as slice but mutates array
+arr.splice(-1)           //1 element from last removed
+
+
+
+// REVERSE (M)
+arr.reverse()
+
+// CONCAT (N-M)
+// joins two arrays arr1.concat(arr2)
+arr.concat(arr2)
+[...arr, ...arr2] is same
+
+
+// JOIN (N-M)
+(arr.join("--")

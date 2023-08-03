@@ -1,0 +1,3 @@
+MATH
+Math.abs(movement)
+will take -ve values from movement array and log as +ve

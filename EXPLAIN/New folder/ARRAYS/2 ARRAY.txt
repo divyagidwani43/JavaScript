@@ -66,6 +66,3 @@ console.log(friends.includes('23'));
 it has strict coersion it will display false due to string of 23 not the number
 console.log(friends.includes(23));
 will be true                                                     
-
-
-

@@ -1,0 +1,27 @@
+FOREACH
+
+array_name.forEach(function (any) {
+    console.log(any)
+    // any are the values of array 
+
+
+
+array_name.forEach(function (value, index, array) {
+    // we get above in a specified order only
+})
+
+in map and set forEach we get 3 values in function
+value, key, map
+for set value and key are same values but only the third value is set itself
+
+
+set_name.forEach(function (val1, val2, val3) {
+    val2 //will give set values
+    val1 //will give set values
+    val3 //will give set
+})
+
+
+mao_name.forEach(function (value, key, map) {
+    console.log(`${key}: ${value} ${map}`);
+});
