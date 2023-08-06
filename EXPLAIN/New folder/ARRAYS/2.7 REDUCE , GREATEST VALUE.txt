@@ -1,0 +1,22 @@
+REDUCE , GREATEST VALUE
+//specified 0 as intial value of acc so acc=0 for first looop
+// acc = short for accumulator = first value if not specified any code befor it will execute array.length times
+// arrayValues = values of array one by one exclude the first
+
+
+const balanceUse = movements.reduce((acc, arrayValues, i, arr) => {
+    console.log(`iteration ${i} : ${acc}`)
+    return acc + arrayValues
+    // }, 0)
+}, 100) //first value 100 so adding to array value starts from 100
+
+WILL GIVE SUM OF ALL ARRAY VALUES
+
+// GET GREATEST VALUE 
+const great = movements.reduce((acc, curr, i) => {
+    if (acc > curr) return acc
+    else return curr
+}, 0)
+console.log(great)
+
+    console.log(acc) //acc=return value

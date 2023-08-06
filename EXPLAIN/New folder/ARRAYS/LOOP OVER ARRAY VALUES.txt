@@ -1,0 +1,13 @@
+LOOP OVER ARRAY VALUES
+
+FOR EACH
+array_name.forEach(function (value, index, array) {
+    arr3.push(`${index} & ${value}`)
+})
+
+MAP
+const arr2 = array_name.map((el, i, arr) => `${i} & ${el}`)
+
+
+FOR OF
+for (const mov of movements) movementsUsd2.push(mov * eurToUsd)

@@ -1,0 +1,14 @@
+MAPPING ARRAY
+
+const array = [1, 2, 3]
+
+const new_array_copy = array.map((i) => i + 2) //(i) => i + 2 is arrow func , any type can be used
+console.log(new_array_copy) //[3,4,5]
+
+
+//not on objects
+//error on maps
+
+
+array_name.map((el, i, arr) => `${i} & ${el}`)
+// map passes value index and array itself in call back function

@@ -1,3 +1,62 @@
 COMMAND STR
-options.join
-options=array joined into string
+
+// REPEAT
+console.log(mess3.repeat(2))
+
+// PADDING
+(mess.padStart(25, "anySymbol ")) //will make size of string 25 by adding + in front
+(mess.padEnd(25, "+")) //will add in end
+
+// JOIN - joins array form str
+const naameJoin = message.join("--any--")
+message is array
+concat - way to join
+console.log(str1.concat(' ', str22));
+
+// SPLIT
+const str2 = "Socks and camera"
+console.log(str2.split(" and ")) // will split the string at and create an array of values
+
+// INCLUDES
+console.log(str.includes("hy")) //string does have hy but its hey so its false
+
+// START WITH END WITH
+console.log(str.startsWith("he"))
+console.log(str.endsWith("ey"))
+
+// REPLACE PART OF STRINGS
+const inr = 'Rs 1000'
+const dollar = inr.replace('Rs', "$").replace("1000", 1000 / 75)
+// will replace all occurances
+console.log(str.replaceAll("hey", "namaste"))
+console.log(str.replace(/hey/g, "namaste"))
+
+// TRIM
+console.log(strWthSpce.trim())
+console.log(strWthSpce.trimEnd())
+console.log(strWthSpce.trimStart())
+
+
+// TO LOWER AND UPPER CASE
+console.log(anyStr.toLowerCase()) //will convert all to lower case
+console.log(anyStr.toUpperCase())
+
+// SLICE
+console.log(anyStr.slice(3)) //the begin index will be 3 not 0 , 3 included
+// this doesn't change the original string as it is not possible to mutate primitives but this returns a new string
+
+//INDEX
+console.log(anyStr[0]) //to access a certain letter in str
+console.log("str here"[2])
+console.log(`The character at index 1   is '${anyStr.charAt(1)}'`);
+
+// LENGTH
+console.log(anyStr.length)
+
+
+// INDEX OF 
+console.log("anyStr.indexOf(\"T\")", anyStr.indexOf("T")) //will display the index of that letter
+console.log(StrWthNum.lastIndexOf("A")) //find A from last
+
+
+
