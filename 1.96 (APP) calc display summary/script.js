@@ -64,8 +64,7 @@ const inputClosePin = document.querySelector('.form__input--pin');
 const a = document.querySelector('.movements__row')
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// display movements
-console.log(account1.movements) //recieving this data by sending it to function using arguments
+// console.log(account1.movements) //recieving this data by sending it to function using arguments
 
 const displayMovements = function (movements) {
     containerMovements.innerHTML = '';
@@ -97,7 +96,6 @@ const calcPrintBalance = function (acc1) {
     labelBalance.textContent = `${balance} €`;
 }
 calcPrintBalance(account1)
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const calcDisplaySummary = function (movements) {
     console.log(movements)
