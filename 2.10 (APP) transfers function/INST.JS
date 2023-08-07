@@ -125,36 +125,29 @@ const calcDisplaySummary = function (movements) {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // EVENT LISTENERs
 btnLogin.addEventListener('click', function (e) {
-    // console.log('login')
-    // only displays for a sec and page reloads as it is a form element and this button submits the form
-    //  so we pass event 
-    e.preventDefault(); //makes sure page doesn't reload and login stays
-    // enter triggers a submit as well
-    // console.log(inputLoginUsername) //holds the user input and inputLoginUsername.value is the way to access the value
-    // console.log(inputLoginUsername.value) //enter any value and hit enter to display entered value and see console
+    // Prevent form from submitting
+    e.preventDefault();
+    const currentAccount = accounts.find((acc) => acc.userName === inputLoginUsername.value)
+    console.log(currentAccount);
+    console.log(accounts)
+    console.log(inputLoginUsername.value)
 
-    // console.log(typeof inputLoginPin.value) //is string 
-    const currentAccount = accounts.find((acc) => acc.userName === inputLoginUsername.value && acc.pin === Number(inputLoginPin.value))
+    if (currentAccount?.pin === Number(inputLoginPin.value)) {
+        // movements
+        displayMovements(currentAccount.movements)
 
-    // NOW DISPLAY ALL DATA BASED ON LOGIN CREDENTIALS ONLY IF THEY RIGHT
-    // movements
-    displayMovements(currentAccount.movements)
+        // UI and Message 
+        labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`
+        containerApp.style.opacity = 100;
 
-    // UI and Message 
-    labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`
-    containerApp.style.opacity = 100;
-    // containerApp has .app styles and style selects styles.css and opacity =100 gets info on screen back that was faded before
+        // balance
+        calcPrintBalance(currentAccount)
 
-    // CLEAR INPUT FIELD
-    // once logged in we dont want user and pin to linger around in input boxes
-    inputLoginPin.value = inputLoginUsername.value = ''
+        // CLEAR INPUT FIELD
+        inputLoginPin.value = inputLoginUsername.value = ''
 
-    // balance
-    calcPrintBalance(currentAccount)
+        // summary 
+        calcDisplaySummary(currentAccount.movements)
 
-    // summary 
-    calcDisplaySummary(currentAccount.movements)
-
-
-    console.log(currentAccount)
-})
+    }
+});

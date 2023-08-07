@@ -1,0 +1,10 @@
+FORM IN HTML
+
+btnLogin.addEventListener('click', function (e) {
+    // console.log('login')
+    // only displays for a sec and page reloads as it is a form element and this button submits the form
+    //  so we pass event 
+    e.preventDefault(); //makes sure page doesn't reload and login stays
+    // enter triggers a submit as well
+    // console.log(inputLoginUsername) //holds the user input and inputLoginUsername.value is the way to access the value
+    // console.log(inputLoginUsername.value) //enter any value and hit enter to display entered value and see console

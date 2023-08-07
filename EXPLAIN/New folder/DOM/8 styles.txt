@@ -1,0 +1,3 @@
+styles
+containerApp.style.opacity = 100;
+    // containerApp has .app styles and style selects styles.css and opacity =100 gets info on screen back that was faded before

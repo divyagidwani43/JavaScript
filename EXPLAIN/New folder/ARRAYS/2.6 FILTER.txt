@@ -1,0 +1,5 @@
+FILTER
+
+const deposits = movements.filter((el) => el > 0)
+// deposits will only have positive of movements
+

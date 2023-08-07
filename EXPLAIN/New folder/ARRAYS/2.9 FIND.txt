@@ -1,0 +1,12 @@
+FIND 
+
+movements.find((el) => el > 400)
+//will return first element of array that satisfies the condition
+
+accounts.find((el) => {
+    // console.log(el) //has all objects in accounts will find 'Jessica Davis' and stop when found so gives 2 objects to console as it access 1st obj as well before stopping on second i.e the match
+
+    return el.owner == 'Jessica Davis'
+}))
+
+accounts.find((el) => el.pin = 3333))

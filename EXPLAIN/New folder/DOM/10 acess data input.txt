@@ -1,0 +1,3 @@
+acess data input
+inputLoginUsername.value
+takes the value we enter in the class defined in inputLoginUsername
