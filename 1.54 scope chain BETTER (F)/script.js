@@ -25,6 +25,7 @@ function one(argumentInOne) {
 
 // one(4) //error must be called after gloabal var as it is used in this
 const globalDeclare = 'globalDeclare';
+const globalDeclareValueChangeInTwo = 'globalDeclareValueChangeInTwo';
 one('argumentInOne');
 
 
