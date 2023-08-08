@@ -9,6 +9,13 @@ console.log(arr.slice(2))       //after [2] include [2]
 console.log(arr.slice(-3))
 console.log(arr.slice(1, -2))   // b/w 1=[1] and -2=[2]
 
+
+// REMOVE ELEMENT FROM ARRAY
+const arr22 = [1, 2, 3, 4, 5]
+arr22.splice(2, 1) // 2=index of element u wanna remove
+console.log(arr22)
+
+
 // SPLICE (M)
 // same as slice but mutates array
 console.log("array =      ", arr)

@@ -103,11 +103,13 @@ const calcDisplaySummary = function (acc) {
     // console.log(incomes)
     labelSumIn.textContent = `${incomes}€`
 
-    const out = acc.movements
+    const out = movements
         .filter((mov) => mov < 0)
-        .reduce((acc, curr) => acc + curr)
-    // console.log(out, 400 + 650 + 130)
-    labelSumOut.textContent = `${Math.abs(out)}€`
+    if (out.length > 1) {
+        out.reduce((acc, curr) => acc + curr)
+        // console.log(out, 400 + 650 + 130)
+        labelSumOut.textContent = `${Math.abs(out)}€`
+    } else labelSumOut.textContent = `0000€`
 
     // bank pays interest 1.2% of deposit  every deposit only if interest is least 1euro
     const interest = acc.movements
