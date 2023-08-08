@@ -1,0 +1,8 @@
+SCOPE OF FUNCTION
+
+let var ;
+function one(){
+var = value}
+
+one()
+console.log(var)//value willl be here

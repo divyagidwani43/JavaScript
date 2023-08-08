@@ -1,4 +1,4 @@
-REDUCE , GREATEST VALUE
+REDUCE , GREATEST VALUE , ERROR AT LENGTH = 0
 //specified 0 as intial value of acc so acc=0 for first looop
 // acc = short for accumulator = first value if not specified any code befor it will execute array.length times
 // arrayValues = values of array one by one exclude the first
@@ -20,3 +20,17 @@ const great = movements.reduce((acc, curr, i) => {
 console.log(great)
 
     console.log(acc) //acc=return value
+
+
+
+
+
+    // acc4 has no out deposits and out length = 0 here reduce function will error
+    // interest i.e the variable declared below inthis function wont execute as well
+    const out = movements
+        .filter((mov) => mov < 0)
+    if (out.length > 1) {
+        out.reduce((acc, curr) => acc + curr)
+        // console.log(out, 400 + 650 + 130)
+        labelSumOut.textContent = `${Math.abs(out)}€`
+    } else labelSumOut.textContent = `0000€`
