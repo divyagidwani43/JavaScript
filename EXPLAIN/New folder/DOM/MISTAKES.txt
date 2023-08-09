@@ -1,0 +1,23 @@
+MISTAKES
+
+
+DO NOT MUTTATE ARRAY ORIGINAL ARRAY IF U WANT TO ACCESS IT AGAIN KNOW WHAT FUNCTIONS MUTATE
+// creat a copy using slice not change the original array otherwise on click twie it wont change to before array as it is mutated
+    
+    const movs = sort ? movements.slice().sort((a, b) => a - b) : movements
+    
+
+
+ADD 0 IN REDUCE
+// const out = acc.movements
+    //     .filter((mov) => mov < 0)
+    // if (out.length > 1) {
+    //     const out2 = out.reduce((acc, curr) => acc + curr)
+    //     console.log(out, 400 + 650 + 130)
+    //     labelSumOut.textContent = `${Math.abs(out2)}€`
+    // } else labelSumOut.textContent = `0000€`
+    
+    const out = acc.movements
+        .filter((mov) => mov < 0)
+        .reduce((acc, curr) => acc + curr, 0) //add 0 at last
+    labelSumOut.textContent = `${Math.abs(out)}€`
