@@ -1,0 +1,6 @@
+OPERATE NOT MUTATING
+
+console.log(arr.slice())//creates a copy operate on this rather than actual array
+
+console.log(arr.slice().sort((a, b) => a - b))
+console.log(arr) //not mutated
