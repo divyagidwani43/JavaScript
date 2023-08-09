@@ -1,0 +1,19 @@
+FLAT FLATMAP
+
+// FLAT
+console.log(arrDeep.flat()) 
+// will open [el, [this] , [el,[not this]], el] ===> [el,this,el,[this],el]
+console.log(arrDeep.flat(2)) 
+//will open [el, [el,[these]] ,el] too
+// similarly
+console.log(arrDeep.flat(3))
+
+
+
+
+
+FLATMAP
+    .flatMap((acc) => acc.movements) 
+//map() then flat() method called (call back required same as maps)
+// flatMap can only open [[this]] not [el,[el,[this]]]
+// .flat()   //is common operation so that reduce function doesn't error due to [[this]]
