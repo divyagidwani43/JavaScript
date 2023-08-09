@@ -1,0 +1,26 @@
+SORT ARRAY(m)
+
+const arr = [2, 30, 5, 4, 1]
+console.log(arr.sort()) 
+// numbers are sorted like words are i.e on the basis of thier first letter 
+// here 30 is bigger but 3 is in mid so 30 is in mid to solve this give sort (callback)
+
+
+
+
+// CALLBACK
+    // CALLBACK WORKING -> a,b are any 2 consecutive numbers in array eg 450,-400 
+    //return < 0   a,b 
+    //return > 0   b,a
+    // ascending order
+console.log("ascending", arr.sort((a, b) => a > b ? 1 : -1))
+//will recognise 30 as last
+
+
+
+
+2nd WAY 
+console.log("ascending", arr.sort((a, b) => a - b))
+// a-b<0 when a>b --->return<0---->keep
+// a-b>0 when a<b --->return>0---->switch
+console.log("decending", arr.sort((a, b) => b - a)) 
