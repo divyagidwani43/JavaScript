@@ -9,3 +9,4 @@ console.log(movements.some((el) => el > 1500)) //3000 there so true
 console.log(movements.some((el) => el > 40000))
 console.log(movements.some((el) => el < 0)) //see withdrawls
 console.log(movements.some((el) => el > 0)) //see deposits
+

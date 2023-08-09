@@ -1,40 +1,32 @@
 'use strict';
-/////////////////////////////////////////////////
 // Data
-// when data is from API it is in form of objects
 const account1 = {
     owner: 'Jonas Schmedtmann',
     movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
     interestRate: 1.2, // %
     pin: 1111,
 };
-
 const account2 = {
     owner: 'Jessica Davis',
     movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
     interestRate: 1.5,
     pin: 2222,
 };
-
 const account3 = {
     owner: 'Steven Thomas Williams',
     movements: [200, -200, 340, -300, -20, 50, 400, -460],
     interestRate: 0.7,
     pin: 3333,
 };
-
 const account4 = {
     owner: 'Sarah Smith',
     movements: [430, 1000, 700, 50, 90],
     interestRate: 1,
     pin: 4444,
 };
-
 const accounts = [account1, account2, account3, account4];
 
-/////////////////////////////////////////////////
 // Elements
-// all html elements
 const labelWelcome = document.querySelector('.welcome');
 const labelDate = document.querySelector('.date');
 const labelBalance = document.querySelector('.balance__value');
@@ -64,16 +56,21 @@ const inputClosePin = document.querySelector('.form__input--pin');
 const a = document.querySelector('.movements__row')
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// console.log(account1.movements) //recieving this data by sending it to function using arguments
-
-const displayMovements = function (movements) {
+const displayMovements = function (movements, sort = false) {
     containerMovements.innerHTML = '';
-    movements.forEach(function (mov, i) {
+    // creating conditional rendering of movements array as movs based on true and false value of sort
+    // the true false will be done through button
+    // const movs = sort ? movements.sort((a, b) => a - b) : movements
+    // creat a copy using slice not change the original array otherwise on click twie it wont change to before array as it is mutated
+
+    const movs = sort ? movements.slice().sort((a, b) => a - b) : movements
+    // movements.forEach(function (mov, i) {
+    // render movs instead of movements
+    movs.forEach(function (mov, i) {
         const type = mov > 0 ? "deposit" : "withdrawal"
         const html = `
     <div class="movements__row">
       <div class="movements__type movements__type--${type}">${i + 1} ${type}</div>
-      <div class="movements__date">${i + 1} days ago</div>
       <div class="movements__value">€${Math.abs(mov)}</div>
     </div>`;
         containerMovements.insertAdjacentHTML('afterbegin', html)
@@ -89,78 +86,112 @@ createUserNames(accounts)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // NOT GENERALISED
-const calcPrintBalance = function (acc1) {
-    const balance = acc1.movements.reduce((acc, curr, i) => acc + curr, 0)
-    // console.log(balance)
-    labelBalance.textContent = `${balance} €`;
+const calcPrintBalance = function (accs) {
+    accs.balance = accs.movements.reduce((acc, curr, i) => acc + curr, 0)
+    labelBalance.textContent = `${accs.balance} €`;
 }
 
 const calcDisplaySummary = function (acc) {
-    // console.log(acc)
     const incomes = acc.movements
         .filter((mov) => mov > 0)
         .reduce((acc, curr) => acc + curr)
-    // console.log(incomes)
     labelSumIn.textContent = `${incomes}€`
-
-
-    // const out = acc.movements
-    //     .filter((mov) => mov < 0)
-    // if (out.length > 1) {
-    //     const out2 = out.reduce((acc, curr) => acc + curr)
-    //     console.log(out, 400 + 650 + 130)
-    //     labelSumOut.textContent = `${Math.abs(out2)}€`
-    // } else labelSumOut.textContent = `0000€`
 
     const out = acc.movements
         .filter((mov) => mov < 0)
         .reduce((acc, curr) => acc + curr, 0) //add 0 at last
     labelSumOut.textContent = `${Math.abs(out)}€`
 
-    // bank pays interest 1.2% of deposit  every deposit only if interest is least 1euro
+
     const interest = acc.movements
         .filter((mov) => mov > 0)
-        .map((mov) => mov * acc.interestRate / 100)  //gives interst array i.e array of interests on deposits
-        .filter((int) => int > 1)   //if interest array has any value <1 it will be discarded 
+        .map((mov) => mov * acc.interestRate / 100)
+        .filter((int) => int > 1)
         .reduce((acc, curr) => acc + curr)
-    // console.log(interest)
-    // console.log(acc.interestRate)
     labelSumInterest.textContent = `${interest}€`
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// EVENT LISTENERs
-btnLogin.addEventListener('click', function (e) {
-    // console.log('login')
-    // only displays for a sec and page reloads as it is a form element and this button submits the form
-    //  so we pass event 
-    e.preventDefault(); //makes sure page doesn't reload and login stays
-    // enter triggers a submit as well
-    // console.log(inputLoginUsername) //holds the user input and inputLoginUsername.value is the way to access the value
-    // console.log(inputLoginUsername.value) //enter any value and hit enter to display entered value and see console
-
-    // console.log(typeof inputLoginPin.value) //is string 
-    const currentAccount = accounts.find((acc) => acc.userName === inputLoginUsername.value && acc.pin === Number(inputLoginPin.value))
-
-    // NOW DISPLAY ALL DATA BASED ON LOGIN CREDENTIALS ONLY IF THEY RIGHT
+const updateUI = function (currentAccount) {
     // movements
     displayMovements(currentAccount.movements)
-
-    // UI and Message 
-    labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`
-    containerApp.style.opacity = 100;
-    // containerApp has .app styles and style selects styles.css and opacity =100 gets info on screen back that was faded before
-
-    // CLEAR INPUT FIELD
-    // once logged in we dont want user and pin to linger around in input boxes
-    inputLoginPin.value = inputLoginUsername.value = ''
 
     // balance
     calcPrintBalance(currentAccount)
 
     // summary 
     calcDisplaySummary(currentAccount)
+}
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// EVENT LISTENERs
+let currentAccount;
+btnLogin.addEventListener('click', function (e) {
+    e.preventDefault();
+    currentAccount = accounts.find((acc) => acc.userName === inputLoginUsername.value && acc.pin === Number(inputLoginPin.value))
     console.log(currentAccount)
+
+    // UPDATING UI
+    updateUI(currentAccount)
+
+    // UI and Message 
+    labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`
+    containerApp.style.opacity = 100;
+
+    // CLEAR INPUT FIELD
+    inputLoginPin.value = inputLoginUsername.value = ''
+
+})
+
+btnTransfer.addEventListener('click', function (e) {
+    e.preventDefault();
+    const amount = Number(inputTransferAmount.value)
+    const recieverAccount = accounts.find((acc) => acc.userName === inputTransferTo.value)
+    if (amount > 0 && recieverAccount && amount <= currentAccount.balance && recieverAccount.userName !== currentAccount.userName) {
+        recieverAccount.movements.push(amount);
+        currentAccount.movements.push(-amount);
+
+        updateUI(currentAccount)
+    }
+    inputTransferAmount.value = inputTransferTo.value = ''
+
+})
+console.log(accounts)
+
+btnClose.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (currentAccount.userName === inputCloseUsername.value && currentAccount.pin === Number(inputClosePin.value)) {
+        const index = accounts.findIndex((acc) => acc.userName === currentAccount.userName)
+        console.log('account deleted! ')
+        accounts.splice(index, 1)
+        console.log(accounts)
+
+        // hide UI
+        containerApp.style.opacity = 0;
+        labelWelcome.textContent = `login to get started`
+    }
+    inputClosePin.value = inputCloseUsername.value = ''
+})
+
+btnLoan.addEventListener('click', function (e) {
+    e.preventDefault();
+    // for loan there must be one deposit with least 10% of loan amount
+    const amount = Number(inputLoanAmount.value);
+    if (amount > 0 && currentAccount.movements.some((mov) => mov > 0.1 * amount)) {
+        currentAccount.movements.push(amount);
+        updateUI(currentAccount);
+    } else alert('too much loan amount');
+    inputLoanAmount.value = '';
+})
+
+let sorting = false;
+btnSort.addEventListener('click', function (e) {
+    e.preventDefault();
+    // const sorted = currentAccount.movements.sort((a, b) => a - b)
+    // console.log(sorted)
+    // moved to --->displaymovements function
+    displayMovements(currentAccount.movements, !sorting);
+    // giving arguments
+    sorting = !sorting;
+    displayMovements(currentAccount.movements, !sorting);
+
 })
