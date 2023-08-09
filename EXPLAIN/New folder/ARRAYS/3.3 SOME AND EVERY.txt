@@ -1,0 +1,7 @@
+SOME AND EVERY
+
+// true if all elements satisfy the condition
+console.log(someNegi.every((el) => el > 0))
+
+// to check if a codition is true or false not returning array
+console.log(movements.some((el) => el > 1500)) //3000 there so true
